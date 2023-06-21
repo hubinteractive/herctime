@@ -1,0 +1,488 @@
+ {% load static %}
+
+
+<style>
+    .net-svg {
+        fill: var(--modal-white);
+        width: 25px;
+        height: auto;
+    }
+    
+    .s-net-cont {
+        margin-right: .5rem;
+    }
+    
+    .hRgTcm {
+        background-color: transparent;
+        color: #2b2a45;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: 2px solid #a8273e;
+        border-radius: 50px;
+        padding: 15px 25px;
+        font-size: 12px;
+        pointer-events: inherit;
+        cursor: pointer;
+        transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
+        z-index: 5;
+    }
+    
+    .btn {
+        color: var(--modal-white)!important
+    }
+    
+    .dropdown-menu {
+        z-index: var(--bs-dropdown-language-zindex);
+        font-size: var(--bs-dropdown-language-fs);
+        background-color: #0b0e1d!important;
+        opacity: .92;
+        border: 0;
+        border-radius: var(--bs-dropdown-border-radius);
+    }
+    
+    .dropdown-item {
+        --bs-dropdown-item-padding-y: .55rem;
+        padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+        font-weight: 500;
+        color: var(--primary-white)!important;
+        border: 0;
+        border-radius: 0;
+    }
+    
+    .hRgTcm {
+        background-color: transparent;
+        color: #2b2a45;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: 2px solid #a8273e;
+        border-radius: 50px;
+        padding: 15px 25px;
+        font-size: 12px;
+        pointer-events: inherit;
+        cursor: pointer;
+        transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
+        z-index: 0;
+    }
+    
+    .dropdown-divider {
+        height: 0;
+        margin: var(--bs-dropdown-divider-margin-y) 0;
+        overflow: hidden;
+        border-top: 1px solid rgba(255, 255, 255, .14);
+        opacity: 1;
+    }
+</style>
+<section id="herctime-001">
+
+    <div class="info-header p-3 header d-none992max" style="background-color: #0b0e1d">
+        <div class="px-5 d-flex justify-content-between align-items-center">
+            <a href="/" class="d-block">
+                <div>
+                    <img src="{% static 'img/logo-original-mk1.png' %}" style="width: 150px;height: auto;" alt="Herctime">
+                </div>
+                <span style="font-size: .755rem;font-weight: 700; padding: 0 .25rem; color: var(--modal-white);border-radius: .15rem; text-transform: uppercase;">Центар за едукација и одвикнување од коцка</span>
+            </a>
+
+
+
+            <div class="d-flex bg-grunge--mask align-items-center">
+                <div class="div s-net-cont">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="net-svg bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                      </svg>
+                </div>
+
+                <div class="div s-net-cont">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="net-svg bi bi-youtube" viewBox="0 0 16 16">
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                          </svg>
+                    </a>
+                </div>
+
+                <div class="div s-net-cont">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="net-svg bi bi-twitter" viewBox="0 0 16 16">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+                      </svg>
+                </div>
+
+
+
+                <div class="dropdown">
+
+                    <button class="btn btn-secondary dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-europe-africa" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM3.668 2.501l-.288.646a.847.847 0 0 0 1.479.815l.245-.368a.809.809 0 0 1 1.034-.275.809.809 0 0 0 .724 0l.261-.13a1 1 0 0 1 .775-.05l.984.34c.078.028.16.044.243.054.784.093.855.377.694.801-.155.41-.616.617-1.035.487l-.01-.003C8.274 4.663 7.748 4.5 6 4.5 4.8 4.5 3.5 5.62 3.5 7c0 1.96.826 2.166 1.696 2.382.46.115.935.233 1.304.618.449.467.393 1.181.339 1.877C6.755 12.96 6.674 14 8.5 14c1.75 0 3-3.5 3-4.5 0-.262.208-.468.444-.7.396-.392.87-.86.556-1.8-.097-.291-.396-.568-.641-.756-.174-.133-.207-.396-.052-.551a.333.333 0 0 1 .42-.042l1.085.724c.11.072.255.058.348-.035.15-.15.415-.083.489.117.16.43.445 1.05.849 1.357L15 8A7 7 0 1 1 3.668 2.501Z"/>
+                          </svg><div class="ms-2"> Macedonian</div>
+                    </button>
+                    <ul class="dropdown-menu shadow-lg">
+                        <li><a class="dropdown-item" href="#">Serbian</a></li>
+                        <li><a class="dropdown-item" href="#">English</a></li>
+
+                    </ul>
+                </div>
+
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="StartButton-sc-1wk0cgj-2 hRgTcm white-primary">Закажете консултација</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- 2 -->
+    <nav id="navigation" class='navbar navbar-expand-lg bg-body-tertiary bg-red-carmine sticky-top fixed-top-ph offcanvas-spot'>
+        <div class="content-herc d-flex justify-content-between">
+            <a class="navbar-brand d-none992min" href="#">
+
+                <div>
+                    <img src="{% static 'img/logo-original-mk1.png' %}" style="width: 120px;height:auto;" alt="Herctime">
+                </div>
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHerc" aria-controls="offcanvasHerc" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+            <!-- OFFCANVAS -->
+            <div class='offcanvas offcanvas-start-lg  ms-auto offcanvas-bg' tabindex='-1' id='offcanvasHerc' aria-labelledby='offcanvasHercLabel'>
+                <div class='offcanvas-header d-flex d-lg-none align-items-start'>
+                    <h5 class='offcanvas-title text-white' id='offcanvasHercLabel'>
+                        <a href="/" class="d-block">
+                            <div>
+                                <img src="/static/img/logo-original-mk1.png" style="width: 150px;height: auto;" alt="Herctime">
+                            </div>
+                            <span style="font-size: .755rem;font-weight: 500; padding: 0 .25rem; color: #9D9EA4;border-radius: .12rem; text-transform: uppercase; font-weight: 800;display: flex;">Центар за едукација и одвикнување од коцка</span>
+                        </a>
+                    </h5>
+                    <a href='javascript:void(0) ' class='text-reset p-0' data-bs-dismiss='offcanvas' aria-label='close'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--primary-white)" d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+                    </a>
+                </div>
+                <div class='offcanvas-body p-lg-0 off-d-flex'>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Херцтајм
+                            </a>
+                            <ul class="dropdown-menu shadow-lg">
+                                <li><a class="dropdown-item" href="{% url 'index:about_us' %}">За нас</a></li>
+
+                                <li><a class="dropdown-item" href="{% url 'index:gallery' %}">Галерија</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'index:privacy_policy' %}">Политика за приватност</a></li>
+                                <li><a class="dropdown-item" href="{% url 'index:romani' %}">Greensoks 1</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Програм за одвикнување
+                            </a>
+                            <ul class="dropdown-menu shadow-lg">
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'index:treatment_of_gamblers' %}">Третман
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{% url   'index:family_and_gambler' %}">Porodica i kockar
+                                    </a>
+                                </li>
+
+                                <li class="offcan-li">
+                                    <a class="dropdown-item" href="{% url 'index:gambling_problem_scene' %}">PET znaka da vaš partner ima problem sa kockanjem</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'index:gambling_addiction' %}">Zavisnost od kockanja</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'index:pathological_gambling' %}">Patološko kockanje uzroci i posledice</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'index:dealing_with_gambling_problem' %}">Kako postupiti sa osobom koja ima problem sa kockanjem</a>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'index:dejan_stankovic' %}">Dejan Stanković</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index:video_education' %}">Видео едукација </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Романи
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'index:oprostajno_pismo' %}">Oproštajno pismo
+                                    </a>
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'index:romani' %}">Greensoks 1</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Greensoks 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index:blog' %}">Блог </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'index:contact' %}" class="nav-link" style="border-right:0">
+
+                                <span> Контакт</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-none992max ms-auto">
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--primary-white)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                          </svg>
+                            <a href="#" class="white-primary fw-700 mb-0 ms-1"> Тел. +381-63-34-2321 </a>
+                        </div>
+                    </div>
+                    <style>
+                        .excCjt {
+                            position: absolute;
+                            bottom: 2%;
+                            width: calc(100% - 10rem);
+                            height: 12rem;
+                            left: 5rem;
+                            display: flex;
+                            -moz-box-align: center;
+                            align-items: center;
+                            background-color: #9D9EA4;
+                        }
+                    </style>
+                    <div class="ms-auto mb-0 off-mt-10 d-none992min">
+                        <div class="d-flex socila-net mb-3 justify-content-center">
+                            <div class="div s-net-cont">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="net-svg-offcanvas bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                                  </svg>
+                            </div>
+
+                            <div class="div s-net-cont">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="net-svg-offcanvas bi bi-youtube" viewBox="0 0 16 16">
+                                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
+                                      </svg>
+                                </a>
+                            </div>
+
+                            <div class="div s-net-cont">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#9d9ea4   " class="net-svg-offcanvas bi bi-instagram" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                      </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--primary-white)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                          </svg>
+                            <a href="#" class="white-primary fw-700 mb-0 ms-1"> Тел. +381-63-34-2321 </a>
+                        </div>
+
+                        <div class="d-flex justify-content-center align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--primary-white)" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                              </svg>
+
+                            <a class="white-primary fw-400 ms-1" href="#">info@herctime.mk</a></div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+    <div class="d-flexnone992min justify-content-center bg-red-carmine-sm d-none992min" style="padding-top: 55px;">
+        <h5 class="white-primary fw-600 mb-0 py-3" style="letter-spacing: -.01em;;">Call free 0808 8020 133
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+      </svg>
+        </h5>
+    </div>
+
+</section>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header mx-4 d-flex justify-content-between">
+
+                <h3 class="modal-title white-primary" id="exampleModalLabel">Herctime.</h3>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-5">
+                <div class="">
+                    <div class="justify-content-center d-flex w-100 mb-4">
+                        <h2 class="white-primary">Контактирајте не*</h2>
+                    </div>
+                    <div>
+                        <form action=" ">
+                            <div class="form-floating mb-3 ">
+                                <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
+                                <label for="floatingInput ">*Име и презиме </label>
+                            </div>
+                            <div class="form-floating mb-3 ">
+                                <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
+                                <label for="floatingInput ">Е-пошта</label>
+                            </div>
+
+                            <div class="form-floating ">
+                                <textarea class="form-control " placeholder="Leave a comment here " id="floatingTextarea2 " style="height: 100px "></textarea>
+                                <label for="floatingTextarea2 ">Оставете коментар</label>
+                            </div>
+                            <div class="d-flex justify-content-center mb-4">
+                                <button class="hRgTcm mt-5 " style="background-color: transparent;color:var(--primary-white); border: solid 1px var(--primary-white);min-width: 250px; ">Испратете порака</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer mx-4  py-4 d-flex justify-content-between">
+                <p class="white-primary">info@herctime.mk</p>
+                <p class="white-primary"> Тел. +381-63-34-2321 </p>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    /* .content {
+        padding: 16px;
+    } */
+    
+    @media (max-width:992px) {
+        .fixed-top-ph {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1060;
+        }
+    }
+    
+    @media (min-width:992px) {
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    }
+    /* .sticky+.content {
+        padding-top: 60px;
+    } */
+</style>
+
+
+
+
+<script>
+    // fixed navbar
+    window.onscroll = function() {
+        myFunction()
+    };
+
+    var navigation = document.getElementById("navigation");
+    var sticky = navigation.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navigation.classList.add("sticky")
+        } else {
+            navigation.classList.remove("sticky");
+        }
+    }
+</script>
+<style>
+    .nav-ph {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background: #e7e7e7;
+        transition: all 0.3s;
+    }
+    
+    .nav-up {
+        top: -70px;
+    }
+</style>
+<script>
+    // const nav = document.getElementsByClassName(".nav-ph");
+    // const navHeight = 70;
+    // // the point the scroll starts from (in px)
+    // let lastScrollY = 0;
+    // // how far to scroll (in px) before triggering
+    // const delta = 10;
+
+    // // function to run on scrolling
+    // function scrolled() {
+    //     let sy = window.scrollY;
+    //     // only trigger if scrolled more than delta
+    //     if (Math.abs(lastScrollY - sy) > delta) {
+    //         // scroll down -> hide nav bar
+    //         if (sy > lastScrollY && sy > navHeight) {
+    //             nav.classList.add("nav-up");
+    //         }
+    //         // scroll up -> show nav bar
+    //         else if (sy < lastScrollY) {
+    //             nav.classList.remove("nav-up");
+    //         }
+    //         // update current scroll point
+    //         lastScrollY = sy
+    //     }
+    // }
+
+    // // Add event listener & debounce so not constantly checking for scroll
+    // let didScroll = false;
+    // window.addEventListener("scroll", function(e) {
+    //     didScroll = true;
+    // });
+
+    // setInterval(function() {
+    //     if (didScroll) {
+    //         scrolled();
+    //         didScroll = false;
+    //     }
+    // }, 250)
+</script>

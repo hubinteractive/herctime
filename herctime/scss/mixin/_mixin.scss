@@ -1,0 +1,75 @@
+@import "../variables/fonts";
+@import "../variables/navbar";
+@import "../variables/colors";
+@import "../variables/buttons";
+@import "../variables/offcavas";
+@import "../variables/footer";
+@import "../variables/variables";
+// 
+@mixin h2-base-styles($color, $backgroundColor:transparent, $property: null, $value: null, $propertyX: null, $valueX: null) {
+    @if $backgroundColor !=transparent {
+        background-color: $backgroundColor;
+    }
+    @if($property !=null) {
+        #{$property}: $value
+    }
+    @if($propertyX !=null) {
+        #{$propertyX}: $valueX
+    }
+    font-size: $base-font-size-h2;
+    margin-bottom: $base-margin-bottom-h2;
+    color: $blue-dark-styled;
+    letter-spacing: -.875px;
+    line-height: 1;
+    color: $color;
+}
+
+@mixin btn-transparent-hb1-12($value-background-color: null, $value--colora1: null, $text--aligna1: null, $text--aga1: null, $fs-h2--margina1: null, $fs-h2-vMargina1: null) {
+    @if($value-background-color !=null) {
+        #{$value-background-color}: $value--colora1
+    }
+    @if($text--aligna1 !=null) {
+        #{$text--aligna1}: $text--aga1
+    }
+    @if($fs-h2--margina1 !=null) {
+        #{$fs-h2--margina1}: $fs-h2-vMargina1
+    }
+    font-size: 3rem;
+    // margin: 0rem 0rem 2.66667rem 0rem;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+    line-height: 2rem;
+    background-color: red;
+    // line-height: normal;
+}
+
+.button-basic {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.button-report {
+    @extend .button-basic;
+    background-color: red;
+}
+
+.button-submit {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+}
+
+@mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+}
+
+.danger {
+    @include important-text;
+    background-color: green;
+}

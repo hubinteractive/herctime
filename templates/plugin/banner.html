@@ -1,0 +1,117 @@
+{% load static %}
+<section id="banner-herc">
+    <div class="container-fluid overflow-hidden px-0">
+        <style>
+            .elementY {
+                /* content: ''; */
+                background-position: 0% 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url("https://silicon.createx.studio/assets/img/landing/digital-agency/hero-bg.svg");
+                background-image: url("../../static/img/CremarcCircleWhite1.png");
+                /* background-image: url("../../static/img/bg.jpg"); */
+                position: absolute;
+                bottom: 0px;
+                left: -5%;
+                width: 350px;
+                height: 350px;
+                overflow: hidden;
+                pointer-events: none;
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+                margin-top: -74.65px;
+                transform: translate3d(0px, 74.65px, 0px);
+                z-index: -1;
+                /* opacity: .10; */
+                /* background: radial-gradient(ellipse at top, #cac0ca, transparent), radial-gradient(ellipse at bottom, #c9c7c8, transparent); */
+                /* height: 720px; */
+            }
+            
+            .banner-padd {
+                padding: 25% 5% 17.5% 5%;
+            }
+            
+            .banner-sm-bottom {
+                z-index: 1;
+                position: absolute;
+                bottom: -15%;
+                left: 30%;
+                background-color: var(--deep-carmine);
+            }
+            
+            .banner-button-mt {
+                margin-top: 3rem;
+            }
+            
+            .banner-button-color {
+                background-color: transparent;
+                color: var(--dark-byzantine-blue-font);
+                z-index: 1;
+                font-weight: 600;
+            }
+            
+            @media (max-width:992px) {
+                .banner-sm-bottom {
+                    z-index: 1;
+                    position: absolute;
+                    bottom: -17.5%;
+                    left: 0;
+                    background-color: var(--deep-carmine);
+                    width: 100%;
+                }
+                .banner-padd {
+                    padding: 15% 5% 17.5% 5%;
+                }
+                .banner-button-flex {
+                    display: flex;
+                    justify-content: center;
+                }
+                .banner-button-mt {
+                    margin-top: 3rem;
+                }
+                .banner-button-color {
+                    background-color: transparent;
+                    color: var(--primary-white);
+                    z-index: 1;
+                    font-weight: 600!important;
+                }
+            }
+        </style>
+        <div class="row position-relative">
+            <!-- <div class="elementY"></div> -->
+            <div class="col-lg-6 elementXt">
+                <div class="banner-padd ">
+                    <div class="position-relative mb-5x">
+                        <h1 class="link_text">Програм за </h1>
+                        <h1 class="dark-primary mb-4">одвикнување од коцка</h1>
+                        <h3>по метод на Дејан Станковиќ</h3>
+                    </div>
+
+                    <div class="banner-button-flex w-100">
+                        <button data-bs-toggle="modal" data-bs-target="#reservationModel" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="hRgTcm banner-button-mt mb-7 position-relative banner-button-color">Резервирајте термин</button>
+                    </div>
+
+                    <div class="">
+                        <div class="p-4 banner-sm-bottom">
+
+                            <h2 class="white-primary fw-800 mb-4">
+                                Problem sa kockanjem je problem porodice</h2>
+                            <p class="white-primary" style="border-left: solid 3px var(--primary-white);padding-left: 1rem;">Rešite problem sa kockanjem, na najbrži i jednostavan način. Vratite sebi pravi život.</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="col-lg-6 position-relative p-0 d-none992max">
+                <img src="{% static 'img/hero.jpg' %} " class="d-block w-100 img-fluid " style="height: 100%;width: 100%; object-fit: cover;filter: grayscale(.10); " alt="... ">
+
+            </div>
+        </div>
+
+        <div class="container-fluid" style="height: 125px;width: 100%;background-color: #0b0e1d;z-index: -1;"></div>
+    </div>
+
+</section>

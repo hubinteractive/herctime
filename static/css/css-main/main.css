@@ -1,0 +1,21 @@
+.elementX {
+    background-position: 0% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://silicon.createx.studio/assets/img/landing/digital-agency/hero-bg.svg");
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 1903px;
+    height: 704.3px;
+    overflow: hidden;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    margin-top: -74.65px;
+    transform: translate3d(0px, -27.35px, 0px);
+}
+
+body {
+    background-color: aqua;
+}

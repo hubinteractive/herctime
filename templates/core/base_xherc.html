@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} {% endblock %} HercTime</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/core-files/bootstrap-5.3.0/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'herc-scss/herc.min.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="{% static 'css/css-main/main.css' %}"> -->
+
+</head>
+<style>
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+    }
+    
+    @media only screen and (min-width: 769px) {
+        .swiper-slide:first-child {
+            transition: transform 100ms;
+        }
+        .swiper-slide:first-child img {
+            transition: box-shadow 500ms;
+        }
+        .swiper-slide.swiper-slide-active:first-child {
+            transform: translateX(50%);
+            z-index: 2;
+        }
+        .swiper-slide.swiper-slide-active:first-child img {
+            box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+        }
+        .swiper-slide:nth-child(2) {
+            transition: transform 100ms;
+        }
+        .swiper-slide.swiper-slide-next:nth-child(2) {
+            transform: translateX(55%);
+            z-index: 1;
+        }
+        .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+            transform: translateX(-50%);
+        }
+        .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+            transform: translateX(-55%);
+        }
+    }
+</style>
+
+<style>
+    .hRgTcm {
+        background-color: transparent;
+        color: #2b2a45;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: 2px solid #a8273e;
+        border-radius: 50px;
+        padding: 15px 25px;
+        font-size: 12px;
+        pointer-events: inherit;
+        cursor: pointer;
+        transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
+        z-index: 5;
+    }
+    
+    .switch-mode.dark .hRgTcm {
+        background-color: var(--deep-carmine);
+        color: var(--primary-white);
+    }
+    
+    .switch-mode.dark .blog-herctime-h1 {
+        color: var(--primary-white)!important;
+        transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
+    }
+    
+    .switch-mode.dark .blog-title a {
+        color: var(--primary-white)!important;
+        transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
+    }
+    
+    .bg-neon-si {
+        background-color: var(--neon-silver);
+        transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
+    }
+    
+    .switch-mode.dark .bg-neon-si,
+    .switch-mode.dark .card {
+        background-color: var(--bg-dark-mode-st1)!important;
+        transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
+    }
+    
+    .border-0 {
+        border: 0!important;
+    }
+    
+    .switch-mode.dark .border-0 {
+        /* border: solid 2px var(--primary-white)!important; */
+        border: 0;
+        transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
+    }
+    
+    .switch-mode.dark .card-footer {
+        padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+        color: var(--bs-card-cap-color);
+        background-color: var(--bs-card-cap-bg);
+        border-top: var(--bs-card-border-width) solid rgba(255, 255, 255, .14)!important
+    }
+    
+    .color-white-blog {
+        color: var(--dark-byzantine-blue)!important;
+    }
+    
+    .switch-mode.dark .color-white-blog {
+        color: var(--primary-white)!important;
+    }
+    /* .switch-mode.dark .card-left {
+        color: #ccc;
+    } */
+    /*  
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    /* --------------------------- */
+    
+    .switch-mode {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: grid;
+        place-items: center;
+    }
+    
+    .switch-mode.dark {
+        background-color: #10152b;
+        /* background-color: var(--bg-dark-mode-st1); */
+        transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
+    }
+    
+    .toggle {
+        width: 4rem;
+        height: 4rem;
+        background-color: var(--neon-silver);
+        /* position: absolute; */
+        top: 15%;
+        right: 12.5%;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .switch-mode.dark .toggle {
+        background-color: #464646;
+    }
+    
+    .toggle i {
+        font-size: 2rem;
+        color: #777;
+    }
+    
+    .switch-mode.dark .toggle i {
+        color: #ddd;
+    }
+    
+    .background-0 {
+        background-color: transparent!important;
+    }
+    /* ---------------------------------------------------------------------------------------------------------------  ****************************  --------------------------------------------------------------------------- */
+    /* .card {
+        width: 48rem;
+        height: 25rem;
+        border-radius: 2rem;
+        position: relative;
+        display: flex;
+        box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.4);
+    }
+    
+    .switch-mode.dark .card {
+        background-color: #353535;
+    }
+    
+    .card-map {
+        width: 35rem;
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.2;
+    }
+    
+    .card-left {
+        width: 70%;
+        height: 100%;
+        padding: 1rem 0 1rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: #777;
+        z-index: 10;
+    }
+    
+    .switch-mode.dark .card-left {
+        color: #ccc;
+    }
+    
+    .card-type {
+        font-size: 2.5rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    .card-chip {
+        width: 6rem;
+    }
+    
+    .card-num {
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+    }
+    
+    .card-text {
+        font-size: 1.1rem;
+    }
+    
+    .card-date {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    
+    .card-holder {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
+    .card-right {
+        display: flex;
+        align-items: flex-end;
+        padding: 0 0 2rem 2rem;
+        z-index: 10;
+    }
+    
+    .red-circle,
+    .orange-circle {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+    }
+    
+    .red-circle {
+        background-color: #eb001b;
+    }
+    
+    .orange-circle {
+        background-color: #ff5f00;
+        margin-left: -2rem;
+        opacity: 0.7;
+    } */
+</style>
+
+<body>
+    <!-- Navbar -->
+    {% include 'plugin/navbar_dark.html' %} {% block content %} {% endblock %} {% include 'plugin/blog.html' %} {% include 'plugin/video_editorial.html' %} {% include 'plugin/footer.html' %}
+
+
+    <!-- Modal 1 Сchedule a consultation -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header mx-4 d-flex justify-content-between">
+
+                    <h3 class="modal-title white-primary" id="exampleModalLabel">Herctime.</h3>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5">
+                    <div class="">
+                        <div class="justify-content-center d-flex w-100 mb-4">
+                            <h2 class="white-primary">Контактирајте не*</h2>
+                        </div>
+                        <div>
+                            <form action=" ">
+                                <div class="form-floating mb-3 ">
+                                    <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
+                                    <label for="floatingInput ">*Име и презиме </label>
+                                </div>
+                                <div class="form-floating mb-3 ">
+                                    <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
+                                    <label for="floatingInput ">Е-пошта</label>
+                                </div>
+
+                                <div class="form-floating ">
+                                    <textarea class="form-control " placeholder="Leave a comment here " id="floatingTextarea2 " style="height: 100px "></textarea>
+                                    <label for="floatingTextarea2 ">Оставете коментар</label>
+                                </div>
+                                <div class="d-flex justify-content-center mb-4">
+                                    <button class="hRgTcm mt-5 " style="background-color: transparent;color:var(--primary-white); border: solid 1px var(--primary-white);min-width: 250px; ">Испратете порака</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer mx-4  py-4 d-flex justify-content-between">
+                    <p class="white-primary">info@herctime.mk</p>
+                    <p class="white-primary"> Тел. +381-63-34-2321 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 Reservation term-->
+    <div class="modal fade" id="reservationModel" tabindex="-1" aria-labelledby="reservationModelLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header mx-4 d-flex justify-content-between">
+
+                    <h3 class="modal-title white-primary" id="reservationModelLabel">Herctime.</h3>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5">
+                    <div class="">
+                        <div class="justify-content-center d-flex w-100 mb-4">
+                            <h2 class="white-primary">Резервирајте термин</h2>
+                        </div>
+                        <div>
+                            <form action=" ">
+                                <div class="form-floating mb-3 ">
+                                    <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
+                                    <label for="floatingInput ">*Име и презиме </label>
+                                </div>
+                                <div class="form-floating mb-3 ">
+                                    <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
+                                    <label for="floatingInput ">Е-пошта</label>
+                                </div>
+
+                                <div class="form-floating ">
+                                    <textarea class="form-control " placeholder="Leave a comment here " id="floatingTextarea2 " style="height: 100px "></textarea>
+                                    <label for="floatingTextarea2 ">Оставете коментар</label>
+                                </div>
+                                <div class="d-flex justify-content-center mb-4">
+                                    <button class="hRgTcm mt-5 " style="background-color: transparent;color:var(--primary-white); border: solid 1px var(--primary-white);min-width: 250px; ">Испратете порака</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer mx-4  py-4 d-flex justify-content-between">
+                    <p class="white-primary">info@herctime.mk</p>
+                    <p class="white-primary"> Тел. +381-63-34-2321 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static 'css/core-files/bootstrap-5.3.0/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script> -->
+    <script>
+        AOS.init();
+    </script>
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            centeredSlides: false,
+            slidesPerGroupSkip: 1,
+            grabCursor: true,
+            keyboard: {
+                enabled: true,
+            },
+            breakpoints: {
+                769: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                },
+            },
+            scrollbar: {
+                el: ".swiper-scrollbar",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+
+
+</body>
+
+</html>

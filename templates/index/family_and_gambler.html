@@ -1,0 +1,235 @@
+{% extends "core/base_xherc.html" %} {% block title %} Index {% endblock title %} {% load static %} {% block content %}
+
+<style>
+    .banner-next::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        min-width: 100%;
+        height: auto;
+        min-height: 100%;
+        width: auto;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-50%)translateX(-50%);
+        object-fit: cover;
+        background-image: url(../../static/img/family-and-gembler.webp);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+    
+    .htime10-content {
+        z-index: 1;
+        position: relative;
+        padding: 3rem;
+        background-color: rgba(201, 199, 200, .8);
+    }
+</style>
+
+
+
+
+
+<section id="content-next-001">
+    <div class="content-next mb-10">
+        <nav aria-label="breadcrumb" class="my-5">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="dark-primary fw-600" href="/">Почетна</a></li>
+                <li class="breadcrumb-item deep-carmine" aria-current="page">фамилијата и коцкарот</li>
+            </ol>
+        </nav>
+
+
+        <div style="background-color: antiquewhite;" class="position-relative ">
+            <div class="banner-next">
+                <div class="row">
+                    <!-- min-width:992px -->
+
+                    {% include 'plugin/herc_program_banner.html' %}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- max-width:992px -->
+            <div class="d-none992min">
+                <div class="row g-0">
+
+                    <img class="img-fluid" src="{% static 'img/family-and-gembler.webp' %}" alt="">
+                    <div class="deep-carmine-bg p-4">
+                        <div class="text-center mb-4">
+                            <h1 class="mb-4 white-primary">HERC program lečenja patoloških kockara</h1>
+                            <p class="white-primary"> Lečenje kockara po Metodi HERC predstavlja rezultat rada sa osobama koje su zavisne od patološkog kockanja i članovima njihovih porodica.</p>
+
+                        </div>
+                        <div class="d-block text-center">
+                            <div>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="mb-3 
+                                     ht-next-link-white">0808 271 7500</button>
+                            </div>
+                            <div>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="ht-next-link-white">Закажете консултација</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container mt-5 p-0">
+            <div class="row g-0">
+                <div class="col-xl-8 col-lg-7 main-content pe-5">
+                    <h1 class="deep-carmine">Фамилијата и коцкарот</h1>
+                    <!-- <h2 class="dark-primary">MI IMAMO NAJBOLJE REZULTATE – LEČENJE KOCKARA- Herc Time</h2> -->
+
+                    <p>
+                        Porodica i kockar su u nekoj vrsti patološke veze. Kockar pravi probleme, zadužuje se, ne sluša savete roditelja ili supruge, a porodica na sve to ćuti. Vraćaju dugove i tako u krug. Porodica i kockar sve više i više propadaju.
+                    </p>
+                    <p>
+                        Svaka porodica koja ima člana sa problemom kockanja zna da posledice tog problema obuhvataju znatno veći razmer od samog pojedinca sa problemom, već da utiču na sve odnose među članovima, odnosno na celu porodicu. Problem kockanja često je dugo skriven
+                        od očiju porodice, te je time i šok porodice znatno veći kada saznaju za sam problem, a ujedno i za posledice istog, koje su u tom momentu najčešće tolike da se više ne mogu prikrivati.
+                    </p>
+                    <h2 class="dark-primary">Uticaj patološkog kockanja na porodicu najviše se ogleda u sledećim aspektima:</h2>
+                    <hr>
+                    <ul>
+                        <li>Funkcionisanje u porodici i odnosi među članovima</li>
+                        <li>Uticaj na partnere, roditelje, decu i bliske rođake.</li>
+                        <li>Narušeni porodični odnosi, emocionalni problemi i finansijske teškoće koje otežavaju dalje funkcionisanje porodice</li>
+                        <li>Uočena je jasna veza između patološkog kockanja i nasilja u porodici</li>
+                    </ul>
+                    <hr>
+                    <p>Ljudi mogu rešiti problem kockanja, ali to je pre svega proces koji zahteva puno strpljenja i vremena, što dodatno otežava funkcionisanje porodice, te neki odnosi pucaju, dok drugi jačaju kroz taj proces. Važno je naglasiti da donošenje
+                        važnih odluka o međusobnim odnosima u tom periodu nije najmudrije rešenje jer je obično nivo stresa izuzetno visok kod svih članova, te je često nemoguće situaciju u potpunosti sagledati. Bolje rešenje je da svi članovi uzmu vreme
+                        za sebe u okviru kog bi mogli da saberu misli, osećanja i stavove o svemu kroz šta prolaze.</p>
+                    <h2>
+                        Funkcionisanje u porodici i reakcije članova porodice
+                    </h2>
+                    <p>Najčešće reakcije članova uključuju i povlačenje i odbacivanje osobe sa problemom kockanja, optuživanje kockara za sve probleme, pravdanje kockara kod poslodavaca i prijatelja, dodatno ulaganje snage i vremena da se „pokriju“ svi zadaci
+                        koje kockar ne može da ispuni, negativno ponašanje kod drugog člana kako bi se pažnja skrenula sa kockara i mnoge druge.</p>
+
+                    {% include 'plugin/marketing/marketing_2.html' %}
+                    <p>Važno je naglasiti da su takve reakcije potpuno normalne, međutim, ne rešavaju niti ubrzavaju proces rehabilitacije osobe sa problemom, i mogu doprineti daljem prikrivanju problema i posledica. Svakako emocije koje dominiraju kod svih
+                        članova porodice su ljutnja, snažno osećanje straha i strepnje, kao i izdaje. Kao posledica takvih emocija dolazi do udaljavanja od kockara, odnosno, partneri najčešće uskraćuju fizičku i emotivnu bliskost i podršku osobi koja
+                        ih je povredila, a sa druge strane kockar neće isto ni tražiti zbog stida koji oseća prema bliskim osobama, a prijateljstva su često razorena mnogim nevraćenim dugovanjima.</p>
+
+                    <h2>Uticaj na partnerske odnose- porodica i kockar</h2>
+
+                    <p>
+                        Uticaj patološkog kockanja na intimne odnose jasno se može predstaviti kroz tri faze: Faza Negacije, Stresa i Izmorenosti.
+                    </p>
+                    <p>
+                        <strong>U prvoj fazi se povremeno javlja </strong>briga o članu porodice, zadržavanje briga za sebe, traženje opravdanja za kockanje, viđenje kockanja kao privremeno, nalaženje neplaćenih računa ali lako prihvatanje i verovanje
+                        u dobijena objašnjena, iznenadne finansijske krize, prihvatanje kajanje od strane kockara.
+                    </p>
+                    <p>
+                        <strong> U drugoj fazi (fazi stresa) </strong>partner je sve manje kući i vreme ne provodi sa porodicom, česte rasprave i svađe, doživljaj odbačenosti, postavljanje zahteva pred kockara, pokušaji da se kockanje kontroliše, vraćanje
+                        dugova, izbegavanje dece, familije i prijatelja, i sve intenzivnija ljutnja, izolacija.
+                    </p>
+                    <p> <strong>Poslednju, treću, fazu karakteriše </strong> izmorenost partnera svim prethodnim pokušajima da pomogne osobi sa problemom kockanja. U najvećoj meri prisutna je konfuzija, bes, konstantna sumnja, anksioznost i panika. Prisutan
+                        stres se ispoljava i na fizičkom planu. Naime, kockanje ostavlja posledice ne samo na kockara, već i na članove porodice. Vrlo je često sresti povišenu anksioznost pa i depresivnost kod članova porodice koja se spolja manifestuju
+                        kao poremećaj apetita i probave i sna, česte glavobolje i migrene, kao i bolovi u mišićima. Usled borbe sa hroničnim stresom i zanemarivanja svojih potreba, mnogi članovi porodice dolaze do faze „sagorevanja“, u kojoj više nemaju
+                        snage i energije da se bore sa nadolazećim problemima, te dovode do osećanja bespomoćnosti, beznadežnosti, zloupotrebi psihoaktivnih supstanci, razvoda, suicidalnih razmišljanja ili pokušaja.
+                    </p>
+
+                    <h2>
+                        Uticaj na decu / porodica i kockar
+                    </h2>
+                    <p>
+                        Kada je roditelj opterećen kockanjem, a drugi rešavanjem problema partnera ili sprečavanjem partnera da napravi veću štetu, deca se često osećaju zapostavljeno, ignorisano, depresivno i ljuto. Deca su sklona personalizaciji, odnosno da spoljašnje probleme
+                        dovode u vezu sa svojim ponašanjem, te je vrlo moguće da dete pomisli da su roditelji ljuti zbog nečega što ono čini ili ne čini, te razvija snažno osećanje krivice. Mnoga deca počeće da brinu o mlađem bratu ili sestri, ili se
+                        truditi da pruže podršku roditeljima, i time na sebe postaviti dodatne zadatke, koji su, najčešće, u neskladu sa njihovim dobom, te mogu biti preplavljujući.
+                    </p>
+                    <p>
+                        Pored toga, dete će često pomisliti da treba da se odluči na čijoj je „strani“, što produbljuje unutrašnji konflikt prema oba roditelja (jednog roditelja „mora braniti“ i ne priznati ljubav prema drugom roditelju, a na drugog „mora biti ljuto“ iako ga
+                        voli). Naravno, vrlo je moguće da će se dete potruditi da privuče pažnju negativnim ponašanjem kao što je konzumiranje alkohola, droga, ilegalne radnje, kao i kockanje. Deca patoloških kockara su pod znatno većim rizikom da postanu
+                        kockari od dece čiji roditelji ne kockaju.
+                    </p>
+                    <p>
+                        Vrlo je važno objasniti detetu da ono nije ni na koji način odgovorno za postojeći problem, kao i da ne treba da osećaju krivicu, i potrebno je što pre dete vratiti u balansiranu i sigurnu sredinu. Takođe, savetovanje može pomoći detetu da se prilagodi
+                        promenama.
+                    </p>
+                    <h2>
+                        Emocionalna nestabilnost kod kockara i posledice po porodicu
+
+                    </h2>
+
+                    <p>
+                        Kockari često imaju pomešana osećanja vezana za kockanje. Sa jedne strane postoji snažna potreba za kockanjem i zadovoljstvo koje iz istog proizilazi, ali sa druge strane postoji snažan osećaj krivice zbog povređivanja i laganja članova porodice i bliskih
+                        osoba. Često dominira nezadovoljstvo i ljutnja na sebe. Ujedno, često se kod kockara javlja depresivno i negativno raspoloženje, te je važno da članovi porodice prepoznaju i znakove emocionalne nestabilnosti koja može dovesti do
+                        ozbiljnih posedica, u najgorem slučaju do suicida kod osoba sa intenzivnim problemom kockanja, kao i sa velikim posledicama (dugovima i gubicima) istog.
+                    </p>
+                    <p>
+                        Znakovi da je osoba trenutno depresivnog raspoloženja su: razmišljenja o samoubistvu, intenzivna ljutnja, intenzivna tuga i iritabilnost, gubitak interesovanja za sve aktivnosti, promenjen ritam spavanja (predugo ili prekratko, često isprekidano), gubitak
+                        ili dobijanje na težini, slabljenje koncentracije, fokus pažnje na negativnim događajima ili emocijama o kojima osoba neprestano razmišlja, gubitak seksualne potrebe, hroničan umor ili nemogućnost mirovanja. Ukoliko navedeni simptomi
+                        traju duže od dve sedmice bilo bi dobro javiti se za pomoć stručnom licu.
+                    </p>
+
+                    <h2>
+                        Patološko kockanje i nasilje- porodica i kockar
+                    </h2>
+                    <p>
+                        Usled intenzivne ljutnje i intenzivnog stresa, kao i snižene tolerancije na frustraciju može doći i do verbalnog ili fizičkog nasilja od strane kockara. Naime, podaci pokazuju da čak više od polovine patoloških kockara (56%) je priznalo da je bilo fizički
+                        agresivno prema deci, kao i da trećina osoba sa problemom kockanja izveštava o nekom obliku fizičkog nasilja u poslednjih godinu dana. Najčešće žrtve nasilja su partneri, roditelji, bivši partneri i deca. Vrlo je važno na prve
+                        znakove da osoba prolazi težak period otvoreno razgovarati, kako bi se prevenirali iznenadni napadi ljutnje ili besa. Ukoliko uočavate da postoji sumnja da može doći do nasilja, odmah se obratite nadležnima i vrlo ozbiljno shvatite
+                        situaciju u kojoj se nalazite.
+                    </p>
+
+                    <h2>
+                        Patološko kockanje i suicid- porodica i kockar
+                    </h2>
+                    <p>
+                        Takođe, suicidalni rizik postoji kod kockara, kao i kod članova njihovih porodica. Usled javljanja depresije ili intenzivne anksioznosti rizik se dodatno povećava, kao i kod osoba sa sklonošću ka alkoholizmu ili zloupotrebi droga. Osobe koje su govorile
+                        ili pretile suicidom, takođe su pod većim rizikom. Takve pretnje ili priče shvatite ozbiljno i bez osuđivanja probajte da popričate sa osobom o samoj potrebi i da li osoba ima plan kako bi izvršila suicid, koji sugeriše ozbiljno
+                        bavljenje tom idejom. U svakom slučaju osobu uputite na razgovor sa stručnom osobom. Porodica ovaj problem mora shvatiti ozbiljno.
+                    </p>
+                    <p>
+                        Ukoliko sumnjate da član Vaše porodice ima problem kockanja možete pročitati jedan od naših prethodnih tekstova koji govore o <a href="http://kockanjegambling.blogspot.com/2015/05/znakovi-da-clan-porodice-ima-problem.html">znakovima patološkog kockanja kod člana porodice</a>.
+                        Detaljnije informacije o problemu kockanja možete pronaći na našem sajtu <a href="https://www.blogger.com/stankovicdejan.com"> stankovicdejan.com</a>, <a href="http://kockanje.org/"> kockanje.org</a>, i možete nas pratiti na našoj
+                        <a href="https://www.facebook.com/pages/Zbogom-kockanje"> fb stranici.</a>
+                    </p>
+
+
+
+
+
+
+
+
+                    <div class="my-5 d-flex justify-content-center">
+                        <div class="w-100">
+
+
+                            <iframe class="video-fr" loading="lazy" title="ZAŠTO VAM JE FOKUS SAMO NA NOVCU⁉️" src="https://www.youtube.com/embed/5VzjckLqw8c?list=PLpRpUXzcyQipJGa2XI0cDfYqqv5z08-ys" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen="" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <!-- END -->
+                    {% include 'plugin/contact_bottom.html' %}
+
+                </div>
+                {% include 'plugin/right_bar.html' %}
+
+            </div>
+        </div>
+
+
+    </div>
+
+    {% include 'plugin/video_editorial.html' %}
+</section>
+
+<!--  -->
+
+{% endblock %}

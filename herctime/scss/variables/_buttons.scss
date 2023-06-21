@@ -1,0 +1,95 @@
+    // POLLS
+    $dark-blue--button: rgba(28, 78, 123, 1);
+    $hub-btn-border-color: #0d6efd;
+    $moderate-lime-green: rgba(89, 206, 114, 1);
+     :root {
+        --primary-color-white: rgba(255, 255, 255, .92);
+        --primary-color-black: rgba(0, 0, 0, .92);
+        --primary-color-cyan: rgb(0, 172, 168);
+        --pale-aqua: rgba(101, 110, 119, 1);
+        --very-dark-grayish-magenta: rgba(59, 55, 59, 1);
+        --very-dark-blue: rgba(18, 20, 22, 1);
+        --bs-heading-color: #2b2a45;
+        --dark-blue-black: RGBA(5, 5, 33, 1);
+        --very--dark-violet: rgba(15, 5, 37, 1);
+        // 
+    }
+    
+    [class*="btn-"] {
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 0;
+        display: inline-block;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: .66rem 1rem;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        line-height: 1.5;
+        white-space: nowrap;
+        min-width: 10rem;
+        --bs-btn-hover-color: var( --hub-primary-white);
+        --bs-btn-hover-bg: var(--hub-secondary-bg-hover-color);
+        -webkit-transition: color .25s cubic-bezier(0.4, 0, 1, 1), background-color .25s cubic-bezier(0.4, 0, 1, 1), border-color .25s cubic-bezier(0.4, 0, 1, 1), opacity .25s cubic-bezier(0.4, 0, 1, 1), -webkit-transform .25s cubic-bezier(0.4, 0, 1, 1);
+        /* transition: color .25s cubic-bezier(0.4, 0, 1, 1),background-color .25s cubic-bezier(0.4, 0, 1, 1),border-color .25s cubic-bezier(0.4, 0, 1, 1),opacity .25s cubic-bezier(0.4, 0, 1, 1),-webkit-transform .25s cubic-bezier(0.4, 0, 1, 1); */
+        /* transition: color .25s cubic-bezier(0.4, 0, 1, 1),background-color .25s cubic-bezier(0.4, 0, 1, 1),border-color .25s cubic-bezier(0.4, 0, 1, 1),opacity .25s cubic-bezier(0.4, 0, 1, 1),transform .25s cubic-bezier(0.4, 0, 1, 1); */
+        transition: color .25s cubic-bezier(0.4, 0, 1, 1), background-color .25s cubic-bezier(0.4, 0, 1, 1), border-color .25s cubic-bezier(0.4, 0, 1, 1), opacity .25s cubic-bezier(0.4, 0, 1, 1), transform .25s cubic-bezier(0.4, 0, 1, 1), -webkit-transform .25s cubic-bezier(0.4, 0, 1, 1);
+    }
+    
+    [class*="btn-nav"] {
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 0;
+        display: inline-block;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: .66rem 1rem;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        line-height: 1.5;
+        white-space: nowrap;
+        width: 10rem;
+        --bs-btn-hover-color: var( --hub-primary-white);
+        --bs-btn-hover-bg: var(--hub-secondary-bg-hover-color);
+        -webkit-transition: color .25s cubic-bezier(0.4, 0, 1, 1), background-color .25s cubic-bezier(0.4, 0, 1, 1), border-color .25s cubic-bezier(0.4, 0, 1, 1), opacity .25s cubic-bezier(0.4, 0, 1, 1), -webkit-transform .25s cubic-bezier(0.4, 0, 1, 1);
+        /* transition: color .25s cubic-bezier(0.4, 0, 1, 1),background-color .25s cubic-bezier(0.4, 0, 1, 1),border-color .25s cubic-bezier(0.4, 0, 1, 1),opacity .25s cubic-bezier(0.4, 0, 1, 1),-webkit-transform .25s cubic-bezier(0.4, 0, 1, 1); */
+        /* transition: color .25s cubic-bezier(0.4, 0, 1, 1),background-color .25s cubic-bezier(0.4, 0, 1, 1),border-color .25s cubic-bezier(0.4, 0, 1, 1),opacity .25s cubic-bezier(0.4, 0, 1, 1),transform .25s cubic-bezier(0.4, 0, 1, 1); */
+        transition: color .25s cubic-bezier(0.4, 0, 1, 1), background-color .25s cubic-bezier(0.4, 0, 1, 1), border-color .25s cubic-bezier(0.4, 0, 1, 1), opacity .25s cubic-bezier(0.4, 0, 1, 1), transform .25s cubic-bezier(0.4, 0, 1, 1), -webkit-transform .25s cubic-bezier(0.4, 0, 1, 1);
+    }
+    
+    .btn.btn-primary-green {
+        background-color: $moderate-lime-green;
+        border-color: $moderate-lime-green;
+        color: var(--very-dark-blue);
+        font-weight: 600;
+    }
+    
+    .btn.btn-transparent {
+        background-color: transparent;
+        border: solid 1px var(--primary-white);
+        color: var(--primary-white);
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 25rem!important;
+        min-width: 15rem!important;
+        letter-spacing: .5px;
+        padding: 1rem 0;
+    }
+    
+    .btn.btn-primary-deep-cerise {
+        color: var(--primary-white);
+        background-color: var(--deep-cerise);
+        font-weight: 500;
+        width: 20rem!important;
+        // width: 15rem!important;
+        border: solid 1px var(--deep-cerise);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+        letter-spacing: .5px;
+    }

@@ -1,0 +1,100 @@
+{% load static %}
+<section id="herctime-005">
+    <div class="my-7">
+        <style>
+            .book-s1 {
+                margin-left: -150px;
+                background-color: #0b0e1d;
+                padding: 4rem 4rem 1rem 4rem;
+            }
+            
+            .book-fs1 {
+                font-style: italic;
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+            
+            @media (max-width:992px) {
+                .book-s1 {
+                    margin-left: 0;
+                    background-color: #0b0e1d;
+                    padding: 2rem 1rem 1rem 1rem;
+                }
+            }
+            
+            @media (max-width:576px) {
+                #herctime-005 .ps-7x {
+                    padding-left: 0!important;
+                    padding-right: 1rem;
+                }
+                #herctime-005 .my-5 {
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                }
+                #herctime-005 .my-7 {
+                    margin-top: 2rem !important;
+                    margin-bottom: 2rem !important;
+                }
+                /* .px-5 {
+                    padding-right: 0 !important;
+                    padding-left: 0 !important;
+                } */
+                .book-fs1 {
+                    font-style: italic;
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+            }
+        </style>
+        <div>
+
+
+
+
+            <div class="pt-5 px-5 d-flex align-items-baseline position-relative">
+                <h6 style="position: absolute;top: -5%;left: 2.5%;" class="me-4 section-numb">04</h6>
+                <div class="ps-7x">
+                    <h1 class="dark-primary f-200 mb-4">Романи</h1>
+
+                    <h3 class="dark-primary mb-5 fw-800 w-75">Книга која го менува погледот на светот и ви помага да го разберете проблемот со коцкањето, воедно и како да се справите со него.</h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row p-0">
+
+                <div class="col-lg-6 p-0">
+                    <img style="filter: grayscale(.60);" src="{% static 'img/pismo.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="d-flex align-items-center h-100">
+                        <div class="w-100  position-relative book-s1">
+                            <svg style="position: absolute;left:45%; top:5%" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="var(--primary-white)" class="bi bi-quote" viewBox="0 0 16 16">
+                            <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                          </svg>
+                            <svg style="position: absolute;left:45%; bottom:14%;transform: rotate(180deg);" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="var(--primary-white)" class="bi bi-quote" viewBox="0 0 16 16">
+                            <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                          </svg>
+                            <div class="pt-3" style="border-top:solid 2px var(--secondary-white);border-bottom:solid 2px var(--secondary-white)">
+                                <p class="white-primary book-fs1">Da li je uvek baš tako crno ili nije? Voleo sam da zamračim, jer sam u tom mraku imao zonu komfora, zonu na koju sam navikao i u kojoj sam se osećao kao svoj na svome. Tu su se rađali izgovori, opravdanja i laži, neophodna
+                                    hrana za neophodnu snagu daljeg propadanja.
+                                </p>
+                                <p class="white-primary book-fs1">To nije nimalo lako. Mučno je i teško, a ujedno i slatko i gorko. I za neuspeh je potrebno znanje. Ako ste graditelj, a imate fantaziju, stvorićete umetnička dela. Međutim, ako ste rušitelj, a isto imate fantaziju, onda
+                                    morate da se lečite.
+                                </p>
+
+                            </div>
+
+                            <p class="white-primary d-flex justify-content-end mt-5" style="font-size: 1.2rem;">-Dejan Stankovic</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center my-5">
+                <a href="{% url 'index:oprostajno_pismo' %}" class="hRgTcm mt-5 dar " style="background-color: var(--deep-carmine);color: var(--primary-white); ">Прочитај повеќе</a>
+            </div>
+        </div>
+    </div>
+</section>

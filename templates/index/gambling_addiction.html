@@ -1,0 +1,227 @@
+{% extends "core/base_xherc.html" %} {% block title %} Index {% endblock title %} {% load static %} {% block content %}
+
+<style>
+    .banner-next::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        min-width: 100%;
+        height: auto;
+        min-height: 100%;
+        width: auto;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-50%)translateX(-50%);
+        object-fit: cover;
+        background-image: url(../../static/img/content/zavisnost_od_kockanja.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 0;
+    }
+    
+    .htime10-content {
+        z-index: 1;
+        position: relative;
+        padding: 3rem;
+        background-color: rgba(201, 199, 200, .8);
+    }
+</style>
+
+
+
+
+
+<section id="content-next-001">
+    <div class="content-next mb-10">
+        <nav aria-label="breadcrumb" class="my-5">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="dark-primary fw-600" href="/">Почетна</a></li>
+                <li class="breadcrumb-item deep-carmine" aria-current="page">зависност од коцкање</li>
+            </ol>
+        </nav>
+
+
+        <div style="background-color: antiquewhite;" class="position-relative ">
+            <div class="banner-next">
+                <div class="row">
+                    <!-- min-width:992px -->
+
+                    {% include 'plugin/herc_program_banner.html' %}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- max-width:992px -->
+            <div class="d-none992min">
+                <div class="row g-0">
+
+                    <img class="img-fluid" src="{% static 'img/family-and-gembler.webp' %}" alt="">
+                    <div class="deep-carmine-bg p-4">
+                        <div class="text-center mb-4">
+                            <h1 class="mb-4 white-primary">HERC program lečenja patoloških kockara</h1>
+                            <p class="white-primary"> Lečenje kockara po Metodi HERC predstavlja rezultat rada sa osobama koje su zavisne od patološkog kockanja i članovima njihovih porodica.</p>
+
+                        </div>
+                        <div class="d-block text-center">
+                            <div>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="mb-3 
+                                     ht-next-link-white">0808 271 7500</button>
+                            </div>
+                            <div>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="ht-next-link-white">Закажете консултација</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container mt-5 p-0">
+            <div class="row g-0">
+                <div class="col-xl-8 col-lg-7 main-content pe-5">
+                    <h1 class="deep-carmine">ZAVISNOST OD KOCKANJA</h1>
+
+                    <p class="p-4 white-primary" style="background-color: #2b2a45">
+                        Zavisnost od kockanja može uništiti život osobe koja se kocka i čitave njene porodice. Porodica i kockar verovatno pate od ličnih problema i finansijske propasti. Klađenje u kladionici može biti ozbiljan problem za neke ljude. Problem kockanja ponekad
+                        može dovesti i do kriminalnog života.
+                    </p>
+
+                    <div class="p-4 mb-3" style="background-color: var(--ufo-green);">
+                        <h5><strong> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill me-3" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"/>
+                              </svg> 
+                          <span>  Definicija</strong></h5>
+                        <hr>
+                        <p>
+                            Kompulsivni, ili patološki kockar je neko ko nije u stanju da se odupre svojim impulsima da se kocka. To dovodi do ozbiljnih ličnih ili socijalnih posledica. Nagon za kockanjem postaje toliko veliki da napetost može biti oslobođena samo sa sve više kockanja.
+                            Postoji prevelika granica između problema sa kockanjem i kockanja.
+                        </p>
+                    </div>
+                    <div class="p-4 white-primary mb-3 simpt-ht001" style="background-color: #2b2a45;">
+                        <style>
+                            #content-next-001 .main-content .simpt-ht001 ul li::before {
+                                position: relative;
+                                top: .6rem;
+                                left: -1.5rem;
+                                content: " ";
+                                width: .6rem;
+                                height: .6rem;
+                                background: var(--deep-carmine);
+                                z-index: 1;
+                            }
+                            
+                            .simpt-ht001 ul li {
+                                list-style: decimal!important;
+                            }
+                            
+                            #content-next-001 .main-content .simpt-ht001 ul li {
+                                position: relative;
+                                font-size: 1rem;
+                                list-style: none;
+                                margin-bottom: 1rem;
+                                font-weight: 500;
+                            }
+                            
+                            .main-content .video-fr {
+                                width: 100%;
+                                height: 394px;
+                            }
+                        </style>
+                        <h5 class="white-primary"><strong> Simptomi</strong></h5>
+                        <p>Kako znate da li ste zavisni od kockanja?</p>
+                        <p>
+                            Iako neki ljudi vole da se kockaju povremeno, patološki kockar obično napreduje od povremenog kockanja do uobičajenog kockanja. Kako kockanje napreduje, kockar počinje da rizikuje više – i lično i finansijski. To često dovodi do ozbiljnih ličnih problema,
+                            finansijske propasti i kriminalnog ponašanja u cilju podržavanja navike kockanja. Zavisnost od kockanja je pokazano demonstriranjem četiri (ili više) sledećih oblika ponašanja u periodu od 12 meseci (blage četiri do pet ispunjenih
+                            kriterijuma, umereno šest do sedam ispunjenih kriterijuma, ispunjeni kriterijumi od osam do devet):
+                        </p>
+                        <ul class="simpt-ht">
+                            <li>
+                                Potrebno je kockati se sa sve većim količinama novca da bi se osetilo isto ili više uzbuđenja
+                            </li>
+                            <li>
+                                Mnogo neuspelih pokušaja prestanka smanjenja ili prekida kockanja na par meseci ili nekoliko dana
+                            </li>
+                            <li>
+                                Osećaj nemira ili razdražljivosti kada pokušavate da smanjite ili prekinete kockanje
+                            </li>
+                            <li>
+                                Zaokupljenost ili preterane misli (npr., Prethodna iskustva s kockanjem, planiranje novog kockarskog poduhvata, načini da ponovo dobijete novac za kockanje)
+                            </li>
+                            <li>
+                                Kockanje se povećava, a može se čak desiti da izbegne probleme osećaj uznemirenosti (osećaj bespomoćnosti ili krivice), ili osećaj tuge, ili anksioznosti.
+                            </li>
+                            <li>
+                                Kockanje većih količina novca kako bi se pokušali nadoknaditi prethodni gubici (lovljenje prethodnih gubitaka kockanja)
+                            </li>
+                            <li>
+                                Laganje o količini vremena ili novca potrošenog na kockanje
+                            </li>
+                            <li>
+                                Gubitak posla, odnosa ili mogućnosti obrazovanja ili karijere zbog kockanja
+                            </li>
+                            <li>
+                                Oslanjanje se na druge od kojih pozajmljuje novac zbog gubitaka kockanja, posebno kada finansijske situacije postanu očajne zbog učešća u kockanju i novog kockanja- vađenja
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4 mb-3" style="background-color: var(--ufo-green);">
+                        <h5><strong> Tretmani</strong></h5>
+                        <p>
+                            Zavisnost od kockanja se može lečiti. Tretman počinje priznavanjem problema. Opcije lečenja uključuju individualnu terapiju koja traje u zavisnosti od dubine problema od nekoliko dana, do nekoliko meseci. To se zove Programa za odvikavanje. Nedavno se
+                            pokazalo da su lekovi kao što su antidepresivi, opioidni antagonisti i stabilizatori raspoloženja korisni u kombinaciji sa psihoterapijom. Međutim ne postoji jedan lek koji može izlečiti kockanje. Niti neka metoda tipa hipnoze
+                            i slično koja tek tako može izlečiti problem. Poput ovisnosti o alkoholu ili drogama, zavisnost od kockanja je hronični poremećaj koji se pogoršava stalno. Bez adekvatnog tretmana zavisnost od kockanja je sve gore i gore.
+                        </p>
+                    </div>
+                    <div class="p-4 mb-3" style="background-color: #2b2a45;">
+
+                        <p class="white-primary">
+                            Veliki je uticaj vremena na zavisnost od kockanja, što se pre javite postoji velika mogućnost da se spasite pakla. svako neumereno kockanje nosi sa sobom pakao. Izgubićete mnogo novca, kojeg sada i nemate, imaćete velike finansijske i zdravstvene problema
+                            koji prate celu porodicu kockara.
+                        </p>
+                        <p class="white-primary">
+                            <strong>
+                            Ukoliko mislite da imate veći problem koji traje duže od 10 godina javite se i zakažite konsultacije.
+                        </strong>
+                        </p>
+                    </div>
+
+                    <iframe class="video-fr my-5" loading="lazy " title="ZAŠTO VAM JE FOKUS SAMO NA NOVCU⁉️ " src="https://www.youtube.com/embed/jPRVpMb1UV8?list=PLpRpUXzcyQipJGa2XI0cDfYqqv5z08-ys" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture " allowfullscreen=" " frameborder="0 "></iframe>
+
+
+
+
+
+
+
+                    <!-- END -->
+                    {% include 'plugin/contact_bottom.html' %}
+
+
+                </div>
+                {% include 'plugin/right_bar.html' %}
+
+            </div>
+        </div>
+
+
+    </div>
+
+    {% include 'plugin/video_editorial.html' %}
+</section>
+
+<!--  -->
+
+{% endblock %}
