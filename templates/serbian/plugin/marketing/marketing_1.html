@@ -1,0 +1,16 @@
+{% load static %}
+<style>
+    .marketing-1 .marketing-img-h {
+        max-height: 400px;
+    }
+    
+    @media (max-width:1200px) {
+        .marketing-1 .marketing-img-h {
+            max-height: 275px;
+        }
+    }
+</style>
+<div class="marketing-1 d-flex justify-content-center
+">
+    <img class="img-fluid marketing-img-h" src="{% static 'img/content/herc1.jpg' %}" alt="">
+</div>

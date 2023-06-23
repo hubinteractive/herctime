@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'index.apps.IndexConfig'
+    'index.apps.IndexConfig',
+    'serbian_ver.apps.SerbianVerConfig'
     # 'django_heroku',
 ]
 

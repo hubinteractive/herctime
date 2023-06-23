@@ -1,0 +1,109 @@
+{% extends "core/base_xherc.html" %} {% block title %} About Us Herctime MK {% endblock title %} {% load static %} {% block content %}
+
+<style>
+    .banner-next::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        min-width: 100%;
+        height: auto;
+        min-height: 100%;
+        width: auto;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-50%)translateX(-50%);
+        object-fit: cover;
+        background-image: url(../../static/img/content/attachment-Gambling-Addiction.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+    
+    .htime10-content {
+        z-index: 1;
+        position: relative;
+        padding: 3rem;
+        background-color: rgba(201, 199, 200, .8);
+    }
+</style>
+
+
+
+
+
+<section id="content-next-001">
+    <div class="content-next mb-10">
+        <nav aria-label="breadcrumb" class="my-5">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="dark-primary fw-600" href="/">Почетна</a></li>
+                <li class="breadcrumb-item deep-carmine" aria-current="page">за нас</li>
+            </ol>
+        </nav>
+
+
+        <div style="background-color: antiquewhite;" class="position-relative ">
+            <div class="banner-next">
+                <div class="row">
+                    <!-- min-width:992px -->
+
+                    {% include 'plugin/herc_program_banner.html' %}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- max-width:992px -->
+            <div class="d-none992min">
+                <div class="row g-0">
+
+                    <img class="img-fluid" src="{% static 'img/family-and-gembler.webp' %}" alt="">
+                    <div class="deep-carmine-bg p-4">
+                        <div class="text-center mb-4">
+                            <h1 class="mb-4 white-primary">HERC program lečenja patoloških kockara</h1>
+                            <p class="white-primary"> Lečenje kockara po Metodi HERC predstavlja rezultat rada sa osobama koje su zavisne od patološkog kockanja i članovima njihovih porodica.</p>
+
+                        </div>
+                        <div class="d-block text-center">
+                            <div>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="mb-3 
+                                     ht-next-link-white">0808 271 7500</button>
+                            </div>
+                            <div>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="ht-next-link-white">Закажете консултација</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container mt-5 p-0">
+            <div class="row g-0">
+                <div class="col-xl-8 col-lg-7 main-content">
+                    <h1 class="deep-carmine">За нас</h1>
+                    <p>Херцтајм Македонија</p>
+
+                </div>
+                {% include 'plugin/right_bar.html' %}
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!--  -->
+
+{% endblock %}

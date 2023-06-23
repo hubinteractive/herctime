@@ -1,0 +1,44 @@
+{% load static %}
+
+<section id="herctime-002" style="overflow: hidden;">
+
+    <div class="position-relative bg-about bg-about">
+
+        <div class="pt-5 px-5 d-flex align-items-baseline position-relative">
+            <h6 style="position: absolute;top: 0;left: 2.5%;" class="me-4 section-numb">01</h6>
+            <div class="ps-7x">
+                <h1 class="neon-silver f-200 mb-4">За нас</h1>
+                <!-- <h3 class="neon-silver mb-5 fw-800">Прв чекор во решавањето на проблемот со коцкање</h3> -->
+            </div>
+        </div>
+        <div class="content-hub" style="padding: 0 12px;">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="py-8">
+                        <div class="position-relative layer-video">
+                            <video controls="" autoplay="" muted="" playsinline="" loop="" class="center mb-4 ratio ratio-4x3" style="z-index: -1;">
+                                <source src="{% static 'img/herctime.mp4' %}" type="video/mp4">
+                                <p>Sorry, your broswer doesn't support embedded videos.</p>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="w-100 mt-10 px-7 py-5 impact-d" data-aos="fade-up" data-aos-duration="3000">
+                        <!-- <p class="pb-4" style="color:var(--primary-white);">За нас</p> -->
+                        <h2 style="line-height: 1;margin-bottom: 1rem;">
+                            <span style="color:var(--deep-carmine)"> "Herctime"</span> <span style="font-weight: 700;">центар за одвикнување од патолошко коцкање</span></h2>
+                        <!-- <h4 style="color:var(--primary-white);font-size: 4rem;font-weight: 600;">centar za odvikavanje od patološkog kockanja</h4> -->
+                        <h5 class="fw-200" style="color:var(--primary-white); ">Центарот за одвикнувањево во Скопје, е дел од фирмата "Herc Time" во Нови Сад, која веќе 10 години успешно работи со решавање на проблеми со патолошко коцкање
+                        </h5>
+                        <div class="mt-5">
+                            <a href="{% url 'index:about_us' %}" class="hRgTcm " style="background-color: var(--deep-carmine);color:var(--primary-white)">Прочитај
+                            повеќе</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

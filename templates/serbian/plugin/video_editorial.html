@@ -1,0 +1,81 @@
+{% load static %}
+
+<div class="video-editorial my5 bg-dark-blue-black py-md-5">
+    <div class="p-5 pb-0">
+        <style>
+            .video-fr-2 {
+                width: calc(100% - 20px);
+                height: 315.37px;
+            }
+            
+            @media (max-width:992px) {
+                .video-fr-2 {
+                    width: calc(100%);
+                    height: 315.37px;
+                }
+            }
+            
+            .p-md-5 {
+                padding: 3rem!important;
+            }
+            
+            .text-center-sm {
+                text-align: start;
+            }
+            
+            @media (max-width:576px) {
+                .p-5 {
+                    padding: 2rem 0 2rem 0!important;
+                }
+                .text-center-sm {
+                    text-align: center;
+                }
+            }
+        </style>
+
+        <div class="container">
+            <h1 class="white-primary text-center-sm">Video Education</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mt-5 mb-3">
+
+                        <iframe loading="lazy" title="ZAŠTO VAM JE FOKUS SAMO NA NOVCU⁉️" src="https://www.youtube.com/embed/VCQBgFBqqS8?controls=0&rel=0&disablekb=1&showinfo=0&modestbranding=0&html5=1&iv_load_policy=3&autoplay=0&end=0&loop=0&playsinline=0&start=0&nocookie=false&enablejsapi=1&origin=https%3A%2F%2Fstankovicdejan.com&widgetid=2"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="video-fr-2" frameborder="0"></iframe>
+                    </div>
+                    <h4 class="white-primary">ULOG | film o kockanju po istinitim događajima (CEO FILM)</h4>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mt-5 mb-3">
+
+                        <iframe loading="lazy" title="ZAŠTO VAM JE FOKUS SAMO NA NOVCU⁉️" src="https://www.youtube.com/embed/EgTCzW7HFyI?controls=0&rel=0&disablekb=1&showinfo=0&modestbranding=0&html5=1&iv_load_policy=3&autoplay=0&end=0&loop=0&playsinline=0&start=0&nocookie=false&enablejsapi=1&origin=https%3A%2F%2Fstankovicdejan.com&widgetid=1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="video-fr-2" frameborder="0"></iframe>
+                    </div>
+                    <h4 class="white-primary">TEST da li ste zavisni od kockanja?</h4>
+
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="mt-5 mb-3">
+
+                        <iframe loading="lazy" title="ZAŠTO VAM JE FOKUS SAMO NA NOVCU⁉️" src="https://www.youtube.com/embed/sUAfvyCFRGU?feature=oembed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="video-fr-2"
+                            frameborder="0"></iframe>
+                    </div>
+                    <h4 class="white-primary">Oproštajno Pismo - Dejan Stanković</h4>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mt-5 mb-3">
+
+                        <iframe loading="lazy" title="ZAŠTO VAM JE FOKUS SAMO NA NOVCU⁉️" src="https://www.youtube.com/embed/sTfLFx-unr8?list=PUt5aBECrkV8qSQrMTYGVUHA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""
+                            class="video-fr-2" frameborder="0"></iframe>
+                    </div>
+                    <h4 class="white-primary"></h4>
+                </div>
+            </div>
+            <div class="mt-7 d-flex justify-content-center">
+                <div class="d-flex justify-content-center my-5">
+                    <a href="{% url 'index:video_education' %}" class="hRgTcm mt-5 dar " style="background-color: var(--deep-carmine);color: var(--primary-white); ">Сите видеа</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

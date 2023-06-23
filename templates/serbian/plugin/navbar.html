@@ -1,9 +1,9 @@
-{% load static %}
+ {% load static %}
 
 
 <style>
     .net-svg {
-        fill: var(--modal-white);
+        fill: #2b2a45;
         width: 25px;
         height: auto;
     }
@@ -27,64 +27,16 @@
         transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
         z-index: 5;
     }
-    
-    .btn {
-        color: var(--modal-white)!important
-    }
-    
-    .dropdown-menu {
-        z-index: var(--bs-dropdown-language-zindex);
-        font-size: var(--bs-dropdown-language-fs);
-        background-color: #0b0e1d!important;
-        opacity: .92;
-        border: 0;
-        border-radius: var(--bs-dropdown-border-radius);
-    }
-    
-    .dropdown-item {
-        --bs-dropdown-item-padding-y: .55rem;
-        padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
-        font-weight: 500;
-        color: var(--primary-white)!important;
-        border: 0;
-        border-radius: 0;
-    }
-    
-    .hRgTcm {
-        background-color: transparent;
-        color: #2b2a45;
-        letter-spacing: 0.1rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        border: 2px solid #a8273e;
-        border-radius: 50px;
-        padding: 15px 25px;
-        font-size: 12px;
-        pointer-events: inherit;
-        cursor: pointer;
-        transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s;
-        z-index: 0;
-    }
-    
-    .dropdown-divider {
-        height: 0;
-        margin: var(--bs-dropdown-divider-margin-y) 0;
-        overflow: hidden;
-        border-top: 1px solid rgba(255, 255, 255, .14);
-        opacity: 1;
-    }
 </style>
 <section id="herctime-001">
 
-
-    <!-- Navbar Top -->
-    <div class="info-header p-3 header d-none992max" style="background-color: #0b0e1d">
+    <div class="info-header p-3 header d-none992max" style="">
         <div class="px-5 d-flex justify-content-between align-items-center">
             <a href="/" class="d-block">
                 <div>
                     <img src="{% static 'img/logo-original-mk1.png' %}" style="width: 150px;height: auto;" alt="Herctime">
                 </div>
-                <span style="font-size: .755rem;font-weight: 700; padding: 0 .25rem; color: var(--modal-white);border-radius: .15rem; text-transform: uppercase;">Центар за едукација и одвикнување од коцка</span>
+                <span style="font-size: .755rem;font-weight: 500; padding: 0 .25rem; color: #2b2a45;border-radius: .15rem; text-transform: uppercase;">Центар за едукација и одвикнување од коцка</span>
             </a>
 
 
@@ -120,15 +72,13 @@
                           </svg><div class="ms-2"> Macedonian</div>
                     </button>
                     <ul class="dropdown-menu shadow-lg">
-                        <li><a class="dropdown-item" href="{% url 'index-serbian:index-sr' %}">Serbian</a></li>
+                        <li><a class="dropdown-item" href="#">Serbian</a></li>
                         <li><a class="dropdown-item" href="#">English</a></li>
 
                     </ul>
                 </div>
 
-
-
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="StartButton-sc-1wk0cgj-2 hRgTcm white-primary">Закажете консултација</button>
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="StartButton-sc-1wk0cgj-2 hRgTcm">Закажете консултација</button>
             </div>
 
         </div>
@@ -148,14 +98,17 @@
                     <img src="{% static 'img/logo-original-mk1.png' %}" style="width: 120px;height:auto;" alt="Herctime">
                 </div>
             </a>
-
+            <!-- <button class='btn btn-danger navbar-toggler border-3 px-2' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasHerc' aria-controls='offcanvasHerc'>
+            <img style = 'width: 30px' src = 'image/text-center.svg' alt = 'menu icon'>
+          </button> -->
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHerc" aria-controls="offcanvasHerc" aria-expanded="true" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
 
-            <!-- OFFCANVAS Menu -->
+
+            <!-- OFFCANVAS -->
             <div class='offcanvas offcanvas-start-lg  ms-auto offcanvas-bg' tabindex='-1' id='offcanvasHerc' aria-labelledby='offcanvasHercLabel'>
                 <div class='offcanvas-header d-flex d-lg-none align-items-start'>
                     <h5 class='offcanvas-title text-white' id='offcanvasHercLabel'>
@@ -332,7 +285,6 @@
 
     </nav>
 
-    <!-- Phone numb -->
     <div class="d-flexnone992min justify-content-center bg-red-carmine-sm d-none992min" style="padding-top: 55px;">
         <h5 class="white-primary fw-600 mb-0 py-3" style="letter-spacing: -.01em;;">Call free 0808 8020 133
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
@@ -343,51 +295,7 @@
 
 </section>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog ">
-        <div class="modal-content">
-            <div class="modal-header mx-4 d-flex justify-content-between">
 
-                <h3 class="modal-title white-primary" id="exampleModalLabel">Herctime.</h3>
-
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-5">
-                <div class="">
-                    <div class="justify-content-center d-flex w-100 mb-4">
-                        <h2 class="white-primary">Контактирајте не*</h2>
-                    </div>
-                    <div>
-                        <form action=" ">
-                            <div class="form-floating mb-3 ">
-                                <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
-                                <label for="floatingInput ">*Име и презиме </label>
-                            </div>
-                            <div class="form-floating mb-3 ">
-                                <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
-                                <label for="floatingInput ">Е-пошта</label>
-                            </div>
-
-                            <div class="form-floating ">
-                                <textarea class="form-control " placeholder="Leave a comment here " id="floatingTextarea2 " style="height: 100px "></textarea>
-                                <label for="floatingTextarea2 ">Оставете коментар</label>
-                            </div>
-                            <div class="d-flex justify-content-center mb-4">
-                                <button class="hRgTcm mt-5 " style="background-color: transparent;color:var(--primary-white); border: solid 1px var(--primary-white);min-width: 250px; ">Испратете порака</button>
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer mx-4  py-4 d-flex justify-content-between">
-                <p class="white-primary">info@herctime.mk</p>
-                <p class="white-primary"> Тел. +381-63-34-2321 </p>
-            </div>
-        </div>
-    </div>
-</div>
 <style>
     /* .content {
         padding: 16px;
@@ -452,3 +360,42 @@
         top: -70px;
     }
 </style>
+<script>
+    // const nav = document.getElementsByClassName(".nav-ph");
+    // const navHeight = 70;
+    // // the point the scroll starts from (in px)
+    // let lastScrollY = 0;
+    // // how far to scroll (in px) before triggering
+    // const delta = 10;
+
+    // // function to run on scrolling
+    // function scrolled() {
+    //     let sy = window.scrollY;
+    //     // only trigger if scrolled more than delta
+    //     if (Math.abs(lastScrollY - sy) > delta) {
+    //         // scroll down -> hide nav bar
+    //         if (sy > lastScrollY && sy > navHeight) {
+    //             nav.classList.add("nav-up");
+    //         }
+    //         // scroll up -> show nav bar
+    //         else if (sy < lastScrollY) {
+    //             nav.classList.remove("nav-up");
+    //         }
+    //         // update current scroll point
+    //         lastScrollY = sy
+    //     }
+    // }
+
+    // // Add event listener & debounce so not constantly checking for scroll
+    // let didScroll = false;
+    // window.addEventListener("scroll", function(e) {
+    //     didScroll = true;
+    // });
+
+    // setInterval(function() {
+    //     if (didScroll) {
+    //         scrolled();
+    //         didScroll = false;
+    //     }
+    // }, 250)
+</script>
