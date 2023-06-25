@@ -1,4 +1,4 @@
-{% extends "core/base_xherc.html" %} {% block title %} Index {% endblock title %} {% load static %} {% block content %}
+{% extends "serbian/core/base_xherc_sr.html" %} {% block title %} HT | Patološko kockanje uzroci i posledice {% endblock title %} {% load static %} {% block content %}
 
 <style>
     .banner-next::after {
@@ -14,7 +14,7 @@
         height: 100%;
         transform: translateY(-50%)translateX(-50%);
         object-fit: cover;
-        background-image: url(../../static/img/content/attachment-Gambling-Addiction.jpg);
+        background-image: url(../../static/img/content/herctime_pathological_gambling.jpg);
         background-size: 100%;
         background-repeat: no-repeat;
         z-index: 0;
@@ -26,31 +26,68 @@
         padding: 3rem;
         background-color: rgba(201, 199, 200, .8);
     }
+    
+    .video-fr {
+        width: calc(100% - 35px);
+        height: 394px;
+    }
+    /* .content-n-001 ul li::before {
+        position: absolute;
+        top: .6rem;
+        left: -1.5rem;
+        content: " ";
+        width: .6rem;
+        height: .6rem;
+        background: var(--deep-carmine);
+        z-index: 1;
+        border-radius: 50%;
+    } */
+    
+    @media (max-width:1200px) {
+        .video-fr {
+            width: calc(100% - 50px);
+            height: 394px;
+        }
+    }
+    
+    @media (max-width:992px) {
+        .video-fr {
+            width: calc(100%);
+            height: 394px;
+        }
+    }
+    
+    @media (max-width:576px) {
+        .video-fr {
+            width: calc(100%);
+            height: 215.37px;
+        }
+    }
 </style>
 
 
 
 
 
-<section id="content-next-001">
+<section id="content-next-001" class="content-n-001">
     <div class="content-next mb-10">
         <nav aria-label="breadcrumb" class="my-5">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a class="dark-primary fw-600" href="/">Почетна</a></li>
-                <li class="breadcrumb-item deep-carmine" aria-current="page">патолошко коцкање причини и последици </li>
+                <li class="breadcrumb-item"><a class="dark-primary fw-600" href="/">Početna</a></li>
+                <li class="breadcrumb-item deep-carmine" aria-current="page">Patološko kockanje uzroci i posledice</li>
             </ol>
         </nav>
 
-
+        <!-- Banner -->
         <div style="background-color: antiquewhite;" class="position-relative ">
             <div class="banner-next">
                 <div class="row">
                     <!-- min-width:992px -->
-                    {% include 'plugin/herc_program_banner.html' %}
+                    {% include 'serbian/plugin/herc_program_banner.html' %}
                 </div>
             </div>
         </div>
-
+        <!-- Banner max-width:992px -->
         <div class="row">
 
             <!-- max-width:992px -->
@@ -66,11 +103,11 @@
                         </div>
                         <div class="d-block text-center">
                             <div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="mb-3 
-                                     ht-next-link-white">0808 271 7500</button>
+                                <a href="tel:+381653342321" class="mb-3 
+                                     ht-next-link-white">+381-65-33-423-21</a>
                             </div>
-                            <div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="ht-next-link-white">Закажете консултација</button>
+                            <div class="mt-4">
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="ht-next-link-white">Rezervišite termin</button>
                             </div>
                         </div>
 
@@ -84,165 +121,101 @@
             </div>
 
         </div>
+
+
         <div class="container mt-5 p-0">
             <div class="row g-0">
-                <div class="col-xl-8 col-lg-7 main-content">
+                <div class="col-xl-8 col-lg-7 main-content  pe-5">
                     <h1 class="deep-carmine">Patološko kockanje uzroci i posledice</h1>
                     <p> Knjiga Patološko kockanje -uzroci i posledice je objavljena 2007. godine i u njoj su analizirana iskustva u radu sa kockarima, i definisan je problem kockanja kao i sposobnost manipulisanja i posledice njihovog kockanja Knjiga nudi
                         i mnoge odgovore roditeljima i porodici na brojna pitanja. Ova knjiga ne prva u regionu koja na praktičan i stručan način obrađuje patološko kockanje.</p>
-                    <h2 class="dark-primary">PET znaka da vaš partner ima problem sa kockanjem</h2>
-                    <ul>
-                        <li>Probali ste sami da prestanete sa kockanjem i niste uspeli..</li>
-                        <li>Vodili su vas kod psihologa, psihijatra, davali vam neke lekove i niste uspeli..</li>
-                        <li>Vodili vas u privatne bolnice- klinike za odvikavanje od droge i ostalih bolesti zavisnosti i…niste uspeli. Zašto??</li>
-                    </ul>
-                    <p>Zato što niko od tih koji su pokušali da vam pomognu nije prošao pakao kockanja. Zato što vas niko ne razume i ne može da vas shvati. Niko od njih nije ušao o kockarnicu, popunio tiket. Kako može da vam pomogne ako ne zna kakav je
-                        to pakao kroz koji prolazite?</p>
-                    <p><strong> Niste pokušali na pravom mestu!</strong> Mi smo vam poslednja opcija! Ne gubite dragoceno vreme i novac! Ako imate sreće da ovo pročitate a da niste pokušavali nigde onda ste na pravom mestu! Puno je godina rada iza nas, puno
-                        promenjenih života, i srećnih porodica bez kocke koja ih je uništavala. Mi to radimo profesionalno, stručno, i imamo najbolje rezultate koji su priznati u svetu!</p>
 
-                    {% include 'plugin/marketing/marketing_2.html' %}
 
-                    <ul>
-                        <li>Edukacija odvikavanja od kockanja zasnovana je na HERC metodi Dejana Stankovića.</li>
-                        <li>Lečenje kockara po Metodi HERC predstavlja rezultat rada sa osobama koje su zavisne od patološkog kockanja i članovima njihovih porodica.</li>
-                    </ul>
-                    <p>Program sprovodi tim stručnjaka u Novom Sadu (ili online preko vibera). Najefinasnije se pokazalo da edukacije traju 7-10 dana svakodnevno po ubrzanom modelu učenja. time se dobija kontinuitet i dinamika, a promene su očigledne nakon
-                        toga.
+
+                    <p>
+                        U našoj zemlji ne postoji stručna literatura na ovu temu, tako da je kao udženik ova knjiga korišćena u mnogim radovima studenata psihologije, prava, ekonomije, sociologije i sličnih društvenih nauka, obrađujući pojavu patološkog kockanja na specifičan
+                        način.
                     </p>
-                    <h2><strong> HERC program</strong> lečenja patoloških kockara </h2>
-                    <p>Dejan Stanković je napisao tri knjige koje se dobijaju u okviru edukacije: <strong><a href="#">
-                                Ulog</a>, <a href="#"> Patološko kockanje-uzroci i posledice </a> i <a href="#"> Zbogom
-                                kockanje</a>.</strong></p>
 
+                    <p>
+                        <strong>
+                            Ukoliko već postoji sumnja da Vama bliska osoba, ili kolega/koleginica imaju problem patološkog kockanja, neki od najčešćih i najočiglednijih znakova koji Vam mogu delimično opravdati sumnju su:
+                        </strong>
+                    </p>
                     <ul>
                         <li>
-                            U okviru Programa učestvuje tim psihologa koji rade na osnaživanju ličnih i zdravih kapaciteta, emocionalne pismenosti, asertivnosti, i izgradnji ostalih veština kroz razne vidove psiho-edukacija prateći najsavremenije i moderne trendove, saznanja i dostignuća
-                            iz oblasti psihologije.
+                            Često kašnjenje na posao – osoba vrlo moguće ne spava redovno kao posledica praćenja utakmica i rezultata tokom noći, ili noći provodi u kazinima, mada problem sa spavanjem može nastati i kao posledica stresa usled zaduživanja.
                         </li>
                         <li>
-                            Terapije su individualne i prilagođene svakom klijentu.
+                            Osoba često deluje napeto ili umorno, a raspoloženje se naglo menja od depresivnog do euforičnog (zavisni od dobitka ili gubitka).
                         </li>
                         <li>
-                            Diskrecija je zagarantovana.
+                            Duge pauze za ručak – osoba koristi pauze kako bi se kladila, pregledala rezultate ili se sastala sa osobama koje će joj pozajmiti novac.
                         </li>
+                        <li>
+                            Neobrazloživo nestajanje osobe sa radnog mesta u popodnevnim satima – razlozi su identični kao i za predhodno ponašanje, ali su popodnevni sati „udarni“ za postavljanje opklada ili praćenje utakmica u mnogim kladionicama.
+                        </li>
+                        <li>
+                            Uzimanje bolovanja od momenta kada je isto moguće uzeti, a ne zarad stvarnog zdravstvenog problema – osoba će koristiti bolovanje radi kockanja.
+                        </li>
+                        <li>
+                            Kvalitet rada i produktivnost osobe značajno opada, osoba ima problem u održavanju koncentracije i ima problem u ispunjavanju datih rokova.
+                        </li>
+                        <img class="img-fluid my-4" style="width: 100%;" src="{% static 'img/content/herctime_pathological_gambling-1.jpg' %}" alt="">
+                        <li>
+                            Najčešće uzimanje izolovanih dana odmora (vikendi) umesto blokova u vreme koje se podudara sa isplatom plate.
+                        </li>
+                        <li>
+                            Osoba često pozajmljuje novac od kolega pod raznim izgovorima i sklona je konfliktima sa kolegama oko novca.
+                        </li>
+                        <li>
+                            Često odlaženje u prostorije u kojima može pratiti rezultate i čitati sportske vesti.
+                        </li>
+                        <li>
+                            Prekomerno korišćenje mobilnog telefona na radnom mestu (dogovoranje opklada, kao i pozajmica i vraćanja dugova).
+                        </li>
+                        <li>
+                            Čitaju sportske vesti i novine na radnom mestu.
+                        </li>
+                        {% include 'serbian/plugin/marketing/marketing_2.html' %}
+                        <li>
+                            Povlačenje i slaba komunikacija sa kolegama, kao i konflikti sa nadređenima (osobi je naophodno povlačenje kako bi obezbedila što bolje prikrivanje problema i da se ne izlaže situacijama u kojima bi se mogao otkriti ne nužno problem kockanja, koliko mnogobrojne
+                            laži kojima je osoba pravdala svoje nedolaske ili kašnjenja).
+                        </li>
+                        <li>
+                            Osoba se žali na dugove i obaveze koje ima u toku meseca, naravno, objašnjene drugim razlozima.
+                        </li>
+                        <li>
+                            Osoba često nudi kolegama da zajedno ulažu opklade ili za lutriju, a da će ona otići da uplati iste, kako bi imala izgovor da izađe i kocka.
+                        </li>
+                        <li>
+                            Dugovanja na kreditnim karticama ili bankama pre stižu na adresu radnog mesta nego na kućnu adresu.
+                        </li>
+                        <li>
+                            U ekstremnim situacijama osoba može uzeti novac sa radnog mesta ili biti osumnjičena za proneveru novca.
+                        </li>
+                    </ul>
+
+
+
+
+                    <ul>
                         <li>
                             Dužina Programa kao i sam model zavise od dubine problema a određuju se na konsultacijama i na osnovu rezultata psihološkog testiranja.
                         </li>
                     </ul>
-                    <div class="d-flex justify-content-center">
-                        <img class="img-fluid" src="{% static 'img/content/Dejan-Stankovic-scaled.jpg' %}" alt="">
-                    </div>
-                    <p>
-                        Mi vam nudimo jedinstveno rešenje, koje je i brzo i efikasno. Uz našu pomoć i vašu odluku, imate zaista pravi način da prestanete sa kockanjem.
-                    </p>
-
-                    <p>
-                        Za efikasno lečenje zavisnosti od kockanja-edukaciju po metodi HERC kontaktirajte nas na telefon <strong> <a href="#"> 0653342321</a></strong>
-                    </p>
-                    <p>
-                        Kontakt telefoni HERC TIME za zakazivanje konsultacija- Maja, Jelena, Teodora, Sara, ili Andjela
-                    </p>
-
-                    <p>HERC TIME kontakt:
-                        <strong>
-                        <a href="#">0653342321</a> , <a href="#">0665588067</a> ,<a href="#"> 063342106</a>,
-                    </strong></p>
-
-                    <p>Za inostranstvo kontakt/ viber <a href="#"> +381693934939</a></p>
-                    <h5>
-                        <strong>
-                       * Konsultacije obuhvataju: procenu stepena problema sa kockanjem, testiranje i analizu ličnog problema sa preporukama kako je najbolje dalje nastaviti Program za prestanak kockanja..
-                    </strong>
-                    </h5>
-                    <p>
-                        Program odvikavanja je individualan, radi se sa svakim klijentom posebno. Svako ima svoj program kako je najbolje i najbrže da se problem reši. Ukliko je problem u početnoj fazi dovoljno je par časova.
-                    </p>
-                    <h5> <strong>
-                        CENA KONSULTACIJA  : 150 € ( trajanje-60 minuta) 250€ (trajanje – 120 minuta)
-                    </strong>
-                    </h5>
-                    <p>
-                        ZAKAŽITE KONSULTACIJE ŠTO RANIJE. U VAŠEM JE INTERESU DA SE PROBLEM REŠI ŠTO PRE.
-                    </p>
-                    <p>
-                        <a href="#">Kontakt 0653342321</a>
-                    </p>
-                    <p>
-                        Garatntujemo vam diskreciju, i poštujemo vaše životne obaveze. Za klijente koji dolaze iz okolnih zemalja obezbeđujemo smeštaj. Trajanje osnovnog novoa edukacije od 7 do 10 dana. obavljaju se obavezno zakazivanjem na telefon 0653342321
-                    </p>
-
-                    <div>
-                        <div class="row g-0">
-                            <style>
-                                .mb-xl-0 {
-                                    margin: 0!important;
-                                }
-                                
-                                @media (max-width:1200px) {
-                                    .mb-xl-0 {
-                                        margin-bottom: 2rem!important;
-                                    }
-                                    #content-next-001 .img-fluid-team {
-                                        height: 425px;
-                                        -o-object-fit: cover;
-                                        object-fit: cover;
-                                    }
-                                }
-                            </style>
-                            <h2 class="fw-800">Тим на психолози</h2>
-                            <div class="col-xl-4 col-md-12 d-flex justify-content-center">
-                                <img class="img-fluid-team mb-xl-0" src="https://stankovicdejan.com/wp-content/uploads/2019/03/IMG_20190314_171525.jpg" alt="">
-                            </div>
-                            <div class="col-xl-7 col-md-12 d-flex justify-content-center">
-
-                                <img class="img-fluid-team  m-0" src="https://stankovicdejan.com/wp-content/uploads/2021/05/IMG_20210512_104614.jpg" alt="">
 
 
-                            </div>
-                        </div>
-                    </div>
-                    <style>
-                        .video-fr {
-                            width: calc(100% - 100px);
-                            height: 394px;
-                        }
-                        
-                        @media (max-width:1200px) {
-                            .video-fr {
-                                width: calc(100% - 50px);
-                                height: 394px;
-                            }
-                        }
-                        
-                        @media (max-width:992px) {
-                            .video-fr {
-                                width: calc(100%);
-                                height: 394px;
-                            }
-                        }
-                        
-                        @media (max-width:576px) {
-                            .video-fr {
-                                width: calc(100%);
-                                height: 215.37px;
-                            }
-                        }
-                    </style>
-                    <div class="my-5 d-flex justify-content-center">
-                        <div class="w-100">
 
-                            <h2 class="fw-800">Zasto vam je fokus samo na novcu</h2>
-                            <iframe class="video-fr" loading="lazy" title="ZAŠTO VAM JE FOKUS SAMO NA NOVCU⁉️" src="https://www.youtube.com/embed/dSAljrOKk0Y?list=PLpRpUXzcyQipJGa2XI0cDfYqqv5z08-ys" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen="" frameborder="0"></iframe>
-                        </div>
-                    </div>
 
-                    <p class="deep-carmine">#stopkockanje #lecenjekockara #lecenjekockanja #kockanje #gambling #gamblingaddiction #poker #onlinekockanje #rulet #dejanstankovic #herctime</p>
+
+                    {% include 'serbian/plugin/contact_bottom.html' %}
+
+
 
 
                 </div>
-                {% include 'plugin/right_bar.html' %}
+                {% include 'serbian/plugin/right_bar.html' %}
 
             </div>
         </div>

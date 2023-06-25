@@ -280,7 +280,7 @@
 
 <body>
     <!-- Navbar -->
-    {% include 'plugin/navbar_dark.html' %} {% block content %} {% endblock %} {% include 'plugin/blog.html' %} {% include 'plugin/video_editorial.html' %} {% include 'plugin/footer.html' %}
+    {% include 'plugin/navbar_dark.html' %} {% block content %} {% endblock %} {% include 'plugin/video_editorial.html' %} {% include 'plugin/footer.html' %}
 
 
     <!-- Modal 1 Сchedule a consultation -->
@@ -335,24 +335,29 @@
             <div class="modal-content">
                 <div class="modal-header mx-4 d-flex justify-content-between">
 
-                    <h3 class="modal-title white-primary" id="reservationModelLabel">Herctime.</h3>
+                    <h3 class="modal-title white-primary" id="reservationModelLabel">Херцтајм.</h3>
 
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-5">
                     <div class="">
-                        <div class="justify-content-center d-flex w-100 mb-4">
+                        <div class="d-flex w-100 mb-4">
                             <h2 class="white-primary">Резервирајте термин</h2>
                         </div>
                         <div>
                             <form action=" ">
                                 <div class="form-floating mb-3 ">
                                     <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
-                                    <label for="floatingInput ">*Име и презиме </label>
+                                    <label for="floatingInput ">* Име и презиме </label>
                                 </div>
                                 <div class="form-floating mb-3 ">
                                     <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
-                                    <label for="floatingInput ">Е-пошта</label>
+                                    <label for="floatingInput ">* Е-пошта</label>
+                                </div>
+
+                                <div class="form-floating mb-3 ">
+                                    <input type="phone" class="form-control " id="floatingInput " placeholder="name@example.com ">
+                                    <label for="floatingInput ">* Тел</label>
                                 </div>
 
                                 <div class="form-floating ">
@@ -369,7 +374,7 @@
                 </div>
                 <div class="modal-footer mx-4  py-4 d-flex justify-content-between">
                     <p class="white-primary">info@herctime.mk</p>
-                    <p class="white-primary"> Тел. +381-63-34-2321 </p>
+                    <p class="white-primary"> Тел. +389 75 660 840</p>
                 </div>
             </div>
         </div>

@@ -44,9 +44,18 @@ body {
     font-weight: 700;
 }
 
-@media (max-width:1260px) {
+@media (max-width:1460px) {
     .content-herc {
         width: 95%;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0
+    }
+}
+
+@media (max-width:1260px) {
+    .content-herc {
+        width: 98%;
         margin: 0 auto;
         padding-left: 0;
         padding-right: 0
@@ -257,7 +266,7 @@ body {
         display: block;
     }
     .dropdown-menu[data-bs-popper] {
-        top: 35px;
+        top: 100%;
         left: 0;
         margin-top: 10px;
     }
@@ -1134,6 +1143,11 @@ footer {
     background-color: var(--deep-carmine)!important;
     color: var(--primary-white);
     text-transform: uppercase;
+}
+
+.ht-next-link:hover {
+    background-color: var(--modal-white)!important;
+    color: var(--deep-carmine);
 }
 
 .ht-next-link-white {

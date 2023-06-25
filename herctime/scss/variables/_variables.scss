@@ -404,6 +404,12 @@ a {
     width: 100%;
 }
 
+@media (max-width:1200px) {
+    .d-none1200max {
+        display: none
+    }
+}
+
 @media (min-width:1200px) {
     .d-none1200min {
         display: none

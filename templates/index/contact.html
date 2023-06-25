@@ -1,22 +1,669 @@
-{% extends "core/base_xherc.html" %} {% block title %} Index {% endblock title %} {% load static %} {% block content %}
+{% extends "core/base_xherc.html" %} {% block title %} HT | Kontakt {% endblock title %} {% load static %} {% block content %}
 
 
-<section id="herctime-002">
-    <div class="content-hub">
-        <div class="container-fluid mt-8 d-flex justify-content-center">
-            <h1>This is a Herc's Contact</h1>
-        </div>
 
+<style>
+    .style-back_color-bg {
+        background: linear-gradient(to bottom, #0b0e1d, rgb(22, 28, 57) 100%);
+    }
+    
+    .back_color-bg {
+        background-color: #0b0e1d;
+    }
+    
+    .display-105 {
+        font-size: calc(2.7875rem + 1.85vw);
+        color: var(--primary-white);
+        font-weight: 300;
+        letter-spacing: -.01em;
+    }
+    
+    #contact-mk p {
+        color: rgba(255, 255, 255, .62);
+        margin-bottom: 0;
+        font-size: 1.2rem;
+    }
+    
+    #contact-mk a {
+        color: var(--primary-white);
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        position: relative;
+        /* text-decoration: underline!important; */
+    }
+    
+    #contact-mk h1 {
+        font-weight: 800;
+    }
+    
+    #contact-mk .web-add a {
+        color: rgba(255, 255, 255, .62);
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        position: relative;
+    }
+    
+    #contact-mk .web-add br {
+        margin-bottom: .75rem;
+    }
+    
+    #contact-mk a:hover {
+        color: #a8273e!important;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    #contact-mk .hashtags a:hover {
+        color: var(--secondary-white)!important
+    }
+    
+    .herc-mk-info::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: rgba(11, 14, 29, .92);
+        z-index: 0;
+    }
+    
+    #contact-mk .link_text::after {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        z-index: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--primary-white);
+        bottom: -4px;
+        opacity: .8;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        pointer-events: none;
+        -webkit-animation: portSliderLine2 .45s cubic-bezier(0.15, 0.75, 0.5, 1) forwards;
+        animation: portSliderLine2 .45s cubic-bezier(0.15, 0.75, 0.5, 1) forwards;
+    }
+    
+    hr {
+        margin: 1rem 0;
+        color: inherit;
+        border: 0;
+        border-top: var(--bs-border-width) solid;
+        opacity: 1;
+        width: 100%;
+    }
+    
+    .contact-herc {
+        width: 80%;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .fs-phone {
+        font-size: calc(2.7875rem + 1.85vw)!important;
+    }
+    
+    .d-inline-g {
+        display: block;
+    }
+    
+    @media (max-width:992px) {
+        .fs-phone {
+            font-size: calc(1.7875rem + 1.85vw)!important;
+        }
+        .d-inline-g {
+            display: inline-grid;
+        }
+    }
+    
+    @media (max-width:992px) {
+        #contact-mk .py-10 {
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+        #contact-mk .pb-10 {
+            padding-bottom: 2rem !important;
+        }
+        #contact-mk .my-5 {
+            margin-top: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+    }
+    
+    .contact-herc-001a {
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+        width: 100%
+    }
+    
+    @media (max-width:992px) {
+        .contact-herc-001a {
+            position: absolute;
+            left: 5%;
+            bottom: 25%;
+            width: 100%
+        }
+    }
+    
+    .contact-herc-002a {
+        position: absolute;
+        top: -5%;
+        left: 15%;
+        font-size: calc(7.7875rem + 1.85vw)!important;
+    }
+    /* .contact-herc-003a {
+                    background-image: url(https://cultldn.com/wp-content/uploads/2022/10/Contact-ldn.jpg);
+                    margin-left: 10rem;
+                } */
+    
+    @media (max-width:1400px) {
+        .contact-herc-002a {
+            position: absolute;
+            top: -5%;
+            left: 15%;
+            font-size: calc(4.7875rem + 1.85vw)!important;
+        }
+        /* .contact-herc-003a {
+                        background-image: url(https://cultldn.com/wp-content/uploads/2022/10/Contact-ldn.jpg);
+                        margin-left: 10rem;
+                    } */
+    }
+    
+    @media (max-width:1400px) {
+        .contact-herc-002a {
+            position: absolute;
+            top: -5%;
+            left: 5%;
+            font-size: calc(4.7875rem + 1.85vw)!important;
+        }
+    }
+</style>
 
-        <div class="container-fluid my-8">
-            <div class="row">
+<section id="contact-mk">
 
-                <div class="col-lg-10s d-flex justify-content-center">
-                    <img class="img-fluid" src="{% static 'img/svg-1.svg' %}" alt="">
+    <div class="d-flex justify-content-center py-10 back_color-bg">
+        <div class="contact-herc">
+            <h1 class="white-primary display-105">Контакт</h1>
+            <hr>
 
-                </div>
-            </div>
+            <h1 class="white-primary fw-200"> ХЕРЦТАЈМ - центар за едукација и одвикнување од коцка</h1>
+
         </div>
     </div>
+    <div class="content-hub style-back_color-903618-bg">
+
+
+
+        <div class="container-fluid p-0 overflow-hidden back_color-bg">
+
+
+
+
+            <div class="row pb-10">
+
+                <div class="col-lg-8 position-relative herc-mk-info">
+                    <div class="display-105 fw-800 contact-herc-002a w-100 h-100 contact-herc-003a d-none992max">
+                        МКД
+                    </div>
+                    <div class="contact-herc-001a d-none992max">
+                        <div class="mb-4">
+                            <a href="tel:+38975660840" class="white-primary fw-800 mb-0 fs-phone">+389 75 660 840</a>
+                            <h1 class="white-primary fw-700" style="font-size: calc(2 + 1.85vw);">Херцтајм</h1>
+                        </div>
+                        <div class="mb-3">
+                            <p>Email: info@herctime.mk</p>
+                            <p>
+                                Unit 4.01
+                            </p>
+                            <p>
+                                Tea Building
+                            </p>
+                            <p>
+                                56 Shoreditch High Street
+                            </p>
+                            <p>
+                                E1 6JJ
+                            </p>
+                        </div>
+                        <a href="#">View on map</a>
+                    </div>
+                    <div class="d-none992min p-4" style="background: url(https://www.bhfieldschool.org/uploaded/90bb8ca16988f7b8347d33dd4fc5f07d561f121e.jpg);">
+                        <div class="mb-4">
+                            <a href="tel:+38975660840" class="white-primary fw-800 mb-0 fs-phone">+389 75 660 840</a>
+                            <h1 class="white-primary fw-700 position-relative" style="font-size: calc(2 + 1.85vw);">Херцтајм</h1>
+                        </div>
+                        <div class="mb-3">
+                            <p style="color: rgba(255, 255, 255, .62);
+                                margin-bottom: 0;font-size: 1.2rem;position: relative;">Email: info@herctime.mkR</p>
+                            <p style="color: rgba(255, 255, 255, .62)!important;margin-bottom: 0;font-size: 1.2rem;position: relative;">
+                                Unit 4.01
+                            </p>
+                            <p class="position-relative">
+                                Tea Building
+                            </p>
+                            <p class="position-relative">
+                                56 Shoreditch High Street
+                            </p>
+                            <p class="position-relative">
+                                E1 6JJ
+                            </p>
+                        </div>
+                        <a href="#">View on map</a>
+                    </div>
+                    <img style="max-height: 730px;width: 100%;object-fit: cover;" class="img-fluid d-none992max" src="https://www.bhfieldschool.org/uploaded/90bb8ca16988f7b8347d33dd4fc5f07d561f121e.jpg" alt="">
+
+
+
+                </div>
+                <div class="col-lg-4 position-relative">
+                    <!-- <div class="display-105 fw-800 contact-herc-002a w-100 h-100 contact-herc-003a">
+                        МКД
+                    </div> -->
+
+                    <!-- <img class="ms-10" style="margin-left: 18rem; max-height: 730px;object-fit: cover;" src="" alt=""> -->
+                </div>
+            </div>
+            <div class="container py-4">
+                <p class="p-3" style="padding:1rem; border:solid 1px #a8273e;color:var(--primary-white)">Консултациите вклучуваат: проценка на степенот на зависност од коцкање, тестирање и анализа на личниот проблем со препораки за тоа како најдобро да се продолжи со Програмата за прекин на коцкањето. Важно е да се приклучите на една од нашите
+                    програми што е можно поскоро. Секое губење време ќе создаде нови проблеми, финансиски и психолошки. Коцкањето го одзема целото семејство. Не чекајте да немате излез од тоа. Консултациите траат 90 минути. Пожелно е да дојдете со член
+                    на семејството - татко, мајка или партнер. </p>
+
+                <div class="mt-5" style="background-color: var(--modal-white); color: var(--dark-byzantine-blue-font) !important;padding: .5rem;border-radius: 15px;font-weight: 700; max-width: 335px;text-align: center;margin-bottom: 2rem;"> Cena konsultacija : 150 € (90 minuta)</div>
+                <p>
+                    Konsultacije u kancelarijama u Novom Sadu, Beogradu, Banjaluci i Skoplju ili preko Vibera se zakazuju. Kontakt +38163342321
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="back_color-bg">
+        <!-- serbia -->
+        <div class="container">
+            <style>
+                .divider {
+                    margin-right: auto;
+                    margin-left: auto;
+                    height: 0;
+                    position: relative;
+                    border-top-style: none;
+                    height: 4em;
+                    padding: 18px 0px 18px 0px;
+                }
+                
+                .divider::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    border-top-style: solid;
+                    border-width: 1px;
+                    border-color: var(--secondary-white);
+                    width: 45%;
+                    left: 55%;
+                }
+                
+                .divider::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    border-top-style: solid;
+                    border-width: 1px;
+                    border-color: var(--secondary-white);
+                    width: 45%;
+                    left: 0
+                    /* z-index: 1; */
+                }
+            </style>
+            <div class="row py-5">
+                <div class="divider divider-center-icon style-default">
+                    <div style="position: absolute;left: 48.5%;" class="divider-icon icon-inactive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="rgba(255,255,255,.25)" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                          </svg>
+                    </div>
+                </div>
+                <div class="col-lg-6 py-5">
+                    <h1 class="white-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-lg me-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"></path>
+                          </svg> Србија
+                    </h1>
+                    <hr>
+                    <div class="mb-3">
+                        <h2 class="fw-800 deep-carmine">
+                            HERC Time
+                        </h2>
+                        <p>
+                            Augusta Cesarca 18
+                        </p>
+                        <p>
+                            Novi Sad
+                        </p>
+                        <p class="pt-3">
+                            Dejan Stanković
+                            <br>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--primary-white)" class="bi bi-telephone-fill me-2" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                              </svg>
+
+                            <a href="#" class="link_text"> +38163342321</a>
+                            <br style="margin-bottom: 1rem;">
+                            <img class="me-2" src="{% static 'img/viber-svgrepo-com.svg' %}" alt=""> <span style="font-size: .75rem;">Za inostranstvo kontakt/ viber</span> <span> <a href="#" class="link_text"> +38163342321</a></span>
+                        </p>
+                        <a href="#">
+
+                        </a>
+                    </div>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                          </svg> Локација
+                    </a>
+
+                </div>
+                <div class="col-lg-6 my-5 d-flex jcc">
+
+                    <div>
+                        <h3 class="white-primary">Социјални мрежи</h3>
+                        <hr>
+                        <a href="https://www.youtube.com/watch?v=9W8ilKHcHvg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgba(255,255,255, .92)" class="bi bi-youtube me-2" viewBox="0 0 16 16">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                              </svg> youtube
+
+                        </a>
+                        <hr>
+                        <div class="my-4 web-add">
+                            <h3 class="white-primary">
+                                <img src="{% static 'img/web-icon.svg' %}" alt=""> Веб:
+                            </h3>
+                            <hr>
+                            <ul>
+                                <li>
+                                    <a href="https://stankovicdejan.com/">
+                                        stankovicdejan.com
+                                   </a>
+                                </li>
+                                <li>
+                                    <a href="https://kockanje.org/">
+                                        kockanje.org 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://kockanje.net/zavisnost-od-kockanja/">kockanje.net/zavisnost-od-kockanja/</a>
+                                </li>
+                                <li>
+                                    <a href="https://izadjiizigre.com/">izadjiizigre.com</a>
+                                </li>
+                            </ul>
+                            <hr>
+
+
+
+
+
+
+
+                        </div>
+
+                        {% include 'plugin/hashtags.html' %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- bix -->
+
+
+    </div>
+    <div class="style-back_color-bg">
+        <div class="container py-8" style="border-top: solid 1px rgba(255, 255, 255, .25);">
+            <div class="">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 class="white-primary">Босна и Херцеговина</h1>
+                        <hr>
+                        <div class="mb-3">
+                            <h2 class="fw-800 deep-carmine">
+                                HERC Time
+                            </h2>
+                            <p>
+                                Banja Luka
+                            </p>
+                            <p>
+                                78000
+                            </p>
+
+
+                            <p> <strong> E-mail:</strong> info@ulog.ba</p>
+
+                            <p class="pt-3">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--primary-white)" class="bi bi-telephone-fill me-2" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                              </svg>
+
+                                <a href="tel:+38765650 001" class="link_text mb-3"> +387 65 650 001</a>
+
+                                <br>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
+                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+                                      </svg> Локација
+                                </a>
+
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex jcc">
+                        <style>
+                            .jcc {
+                                justify-content: center;
+                            }
+                            
+                            @media (max-width:992px) {
+                                .jcc {
+                                    justify-content: start;
+                                }
+                            }
+                        </style>
+                        <div>
+                            <h3 class="white-primary">Социјални мрежи</h3>
+                            <hr>
+
+                            <a href="https://instagram.com/herctime_banjaluka">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram me-2" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                  </svg> Instagram
+                            </a>
+                            <br class="mb-3">
+
+                            <a href="https://www.ulog.ba/program.php#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook me-2" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                  </svg> Facebook
+
+                            </a>
+
+                            <br class="mb-3">
+                            <a href="https://tiktok.com/@herctime_banjaluka">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-tiktok me-2" viewBox="0 0 16 16">
+                                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                                  </svg> TikTok
+                            </a>
+                            <br class="mb-3">
+                            <a href="https://www.youtube.com/watch?v=9W8ilKHcHvg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgba(255,255,255, .92)" class="bi bi-youtube me-2" viewBox="0 0 16 16">
+                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                                  </svg> youtube
+
+                            </a>
+                            <hr>
+                            <div class="my-4 web-add">
+                                <h3 class="white-primary">
+                                    <img src="{% static 'img/web-icon.svg' %}" alt=""> Веб:
+                                </h3>
+                                <hr>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.ulog.ba">
+                                            www.ulog.ba
+                                       </a>
+                                    </li>
+
+                                </ul>
+                                <hr>
+
+
+
+
+
+
+
+                            </div>
+                            {% include 'plugin/hashtags.html' %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        .hue-color-active {
+            -webkit-animation: hue-rotation 1s linear 0ms infinite!important;
+            -moz-animation: hue-rotation 1s linear 0ms infinite!important;
+            -ms-animation: hue-rotation 1s linear 0ms infinite!important;
+            -o-animation: hue-rotation 1s linear 0ms infinite!important;
+            animation: hue-rotation 1s linear 0ms infinite!important;
+            color: #e1a292!important
+        }
+        
+        .hue-color-active-slow {
+            -webkit-animation: hue-rotation 2s linear 0ms infinite!important;
+            -moz-animation: hue-rotation 2s linear 0ms infinite!important;
+            -ms-animation: hue-rotation 2s linear 0ms infinite!important;
+            -o-animation: hue-rotation 2s linear 0ms infinite!important;
+            animation: hue-rotation 2s linear 0ms infinite!important;
+            color: #e1a292!important
+        }
+        
+        .hue-color:hover {
+            -webkit-animation: hue-rotation 1s linear 0ms infinite!important;
+            -moz-animation: hue-rotation 1s linear 0ms infinite!important;
+            -ms-animation: hue-rotation 1s linear 0ms infinite!important;
+            -o-animation: hue-rotation 1s linear 0ms infinite!important;
+            animation: hue-rotation 1s linear 0ms infinite!important;
+            color: #e1a292!important
+        }
+        
+        #bg-transition {
+            position: fixed;
+            display: block;
+            z-index: 491;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            display: none
+        }
+        
+        @-webkit-keyframes hue-rotation {
+            0% {
+                -webkit-filter: hue-rotate(0);
+                -moz-filter: hue-rotate(0);
+                -ms-filter: hue-rotate(0);
+                -o-filter: hue-rotate(0);
+                filter: hue-rotate(0)
+            }
+            100% {
+                -webkit-filter: hue-rotate(360deg);
+                -moz-filter: hue-rotate(360deg);
+                -ms-filter: hue-rotate(360deg);
+                -o-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg)
+            }
+        }
+        
+        @-moz-keyframes hue-rotation {
+            0% {
+                -webkit-filter: hue-rotate(0);
+                -moz-filter: hue-rotate(0);
+                -ms-filter: hue-rotate(0);
+                -o-filter: hue-rotate(0);
+                filter: hue-rotate(0)
+            }
+            100% {
+                -webkit-filter: hue-rotate(360deg);
+                -moz-filter: hue-rotate(360deg);
+                -ms-filter: hue-rotate(360deg);
+                -o-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg)
+            }
+        }
+        
+        @-ms-keyframes hue-rotation {
+            0% {
+                -webkit-filter: hue-rotate(0);
+                -moz-filter: hue-rotate(0);
+                -ms-filter: hue-rotate(0);
+                -o-filter: hue-rotate(0);
+                filter: hue-rotate(0)
+            }
+            100% {
+                -webkit-filter: hue-rotate(360deg);
+                -moz-filter: hue-rotate(360deg);
+                -ms-filter: hue-rotate(360deg);
+                -o-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg)
+            }
+        }
+        
+        @-o-keyframes hue-rotation {
+            0% {
+                -webkit-filter: hue-rotate(0);
+                -moz-filter: hue-rotate(0);
+                -ms-filter: hue-rotate(0);
+                -o-filter: hue-rotate(0);
+                filter: hue-rotate(0)
+            }
+            100% {
+                -webkit-filter: hue-rotate(360deg);
+                -moz-filter: hue-rotate(360deg);
+                -ms-filter: hue-rotate(360deg);
+                -o-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg)
+            }
+        }
+        
+        @keyframes hue-rotation {
+            0% {
+                -webkit-filter: hue-rotate(0);
+                -moz-filter: hue-rotate(0);
+                -ms-filter: hue-rotate(0);
+                -o-filter: hue-rotate(0);
+                filter: hue-rotate(0)
+            }
+            100% {
+                -webkit-filter: hue-rotate(360deg);
+                -moz-filter: hue-rotate(360deg);
+                -ms-filter: hue-rotate(360deg);
+                -o-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg)
+            }
+        }
+    </style>
 </section>
 {% endblock %}
+
+<!-- <a class="button type-anim upper hue-color" href="https://www.google.ca/maps/place/5605+Avenue+de+Gasp%C3%A9,+Montr%C3%A9al,+QC+H2T+2A4/@45.5283051,-73.5980458,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc9196f8d691e3d:0x45df797a1e695f5e" target="_blank"><span class="type-anim-ctn  js-type-anim-hover-trigger" style="display: inline-block; min-width: 0px; min-height: 0px;"><span class="button-type-anim-arrow"> &gt; </span><span data-type-anim-text="Google map" data-type-anim-text-hover="Find your way" class="button-type-anim-text js-type-anim-text">Google map</span></span></a> -->

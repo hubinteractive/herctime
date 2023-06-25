@@ -1,0 +1,127 @@
+{% extends "core/base_xherc.html" %} {% block title %} Index {% endblock title %} {% load static %} {% block content %}
+
+<style>
+    .banner-next::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        min-width: 100%;
+        height: auto;
+        min-height: 100%;
+        width: auto;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-50%)translateX(-50%);
+        object-fit: cover;
+        background-image: url(../../static/img/consultation.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+    
+    .htime10-content {
+        z-index: 1;
+        position: relative;
+        padding: 3rem;
+        background-color: rgba(201, 199, 200, .8);
+    }
+</style>
+
+
+
+
+
+<section id="content-next-001">
+    <div class="content-next mb-10">
+        <nav aria-label="breadcrumb" class="my-5">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="dark-primary fw-600" href="/">Почетна</a></li>
+                <li class="breadcrumb-item deep-carmine" aria-current="page">консултации</li>
+            </ol>
+        </nav>
+
+
+        <div style="background-color: antiquewhite;" class="position-relative ">
+            <div class="banner-next">
+                <div class="row">
+                    <!-- min-width:992px -->
+
+                    {% include 'plugin/herc_program_banner.html' %}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- max-width:992px -->
+            <div class="d-none992min">
+                <div class="row g-0">
+
+                    <img class="img-fluid" src="{% static 'img/family-and-gembler.webp' %}" alt="">
+                    <div class="deep-carmine-bg p-4">
+                        <div class="text-center mb-4">
+                            <h1 class="mb-4 white-primary">HERC program lečenja patoloških kockara</h1>
+                            <p class="white-primary"> Lečenje kockara po Metodi HERC predstavlja rezultat rada sa osobama koje su zavisne od patološkog kockanja i članovima njihovih porodica.</p>
+
+                        </div>
+                        <div class="d-block text-center">
+                            <div>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="mb-3 
+                                     ht-next-link-white">0808 271 7500</button>
+                            </div>
+                            <div>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="ht-next-link-white">Закажете консултација</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container mt-7 p-0">
+            <div class="row g-0">
+                <div class="col-xl-8 col-lg-7 main-content">
+                    <h1 class="deep-carmine">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus-lg me-5" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"></path>
+                          </svg> Консултации
+                    </h1>
+                    <hr>
+
+                    <!-- <h2 class="dark-primary">Програм за одвикнување</h2> -->
+
+                    <h2 class="dark-primary">Проблемот со коцкање може да ви го уништи животот.</h2>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#a8273e" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                          </svg> Првиот чекор во решавањето на проблемот со коцкањето</p>
+
+                    <!-- <p>
+                        <a href="#">Kontakt +389 75 660 840</a>
+                    </p> -->
+
+
+                    {% include 'plugin/contact_bottom.html' %}
+                </div>
+                {% include 'plugin/right_bar.html' %}
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!--  -->
+
+{% endblock %}

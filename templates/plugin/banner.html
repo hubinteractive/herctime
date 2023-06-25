@@ -50,6 +50,27 @@
                 font-weight: 600;
             }
             
+            @media (min-width:992px) {
+                .link_text-sm::after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    z-index: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: var(--primary-white)!important;
+                    bottom: -10px;
+                    opacity: .8;
+                    left: 0;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    pointer-events: none;
+                    -webkit-animation: portSliderLine2 .45s cubic-bezier(0.15, 0.75, 0.5, 1) forwards;
+                    animation: portSliderLine2 .45s cubic-bezier(0.15, 0.75, 0.5, 1) forwards;
+                }
+            }
+            
             @media (max-width:992px) {
                 .banner-sm-bottom {
                     z-index: 1;
@@ -75,6 +96,12 @@
                     z-index: 1;
                     font-weight: 600!important;
                 }
+                .px-5pr {
+                    text-decoration: underline!important;
+                }
+                #banner-herc .p-5 {
+                    padding: 2rem 2rem 2rem 2rem !important;
+                }
             }
         </style>
         <div class="row position-relative">
@@ -92,11 +119,15 @@
                     </div>
 
                     <div class="">
-                        <div class="p-4 banner-sm-bottom">
+                        <div class="p-5 banner-sm-bottom text-center">
 
                             <h2 class="white-primary fw-800 mb-4">
-                                Problem sa kockanjem je problem porodice</h2>
-                            <p class="white-primary" style="border-left: solid 3px var(--primary-white);padding-left: 1rem;">Rešite problem sa kockanjem, na najbrži i jednostavan način. Vratite sebi pravi život.</p>
+                                Проблемот со коцкање е семеен проблем</h2>
+                            <a href="{% url 'index:family_and_gambler' %}" class="white-primary link_text-sm position-relative px-5pr">
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right me-2 d-none992max" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                  </svg>  -->
+                                Решете го Вашиот проблем со коцкање на најбрз и најлесен начин. Вратете го Вашиот реален живот.</a>
                         </div>
                     </div>
 

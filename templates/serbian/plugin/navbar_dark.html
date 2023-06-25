@@ -3,13 +3,30 @@
 
 <style>
     .net-svg {
-        fill: var(--modal-white);
+        fill: #0b0e1d;
         width: 25px;
         height: auto;
     }
+    /* .s-net-cont {
+        margin-right: .75rem;
+    } */
     
-    .s-net-cont {
-        margin-right: .5rem;
+    @media (min-width:992px) {
+        .herc-001 .s-net-cont {
+            height: 35px;
+            width: 100%;
+            margin: 0 .275rem;
+            padding: 0 1rem;
+            background-color: #01101b;
+            background-color: #13002e;
+            background-color: #0a0a43;
+            background-color: rgba(2, 2, 16, .75);
+            background-color: var(--modal-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
     }
     
     .hRgTcm {
@@ -36,7 +53,7 @@
         z-index: var(--bs-dropdown-language-zindex);
         font-size: var(--bs-dropdown-language-fs);
         background-color: #0b0e1d!important;
-        opacity: .92;
+        opacity: .97;
         border: 0;
         border-radius: var(--bs-dropdown-border-radius);
     }
@@ -74,7 +91,7 @@
         opacity: 1;
     }
 </style>
-<section id="herctime-001">
+<section id="herctime-001" class="herc-001">
 
 
     <!-- Navbar Top -->
@@ -105,7 +122,7 @@
                     </a>
                 </div>
 
-                <div class="div s-net-cont">
+                <div class="div s-net-cont me-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="net-svg bi bi-twitter" viewBox="0 0 16 16">
                         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
                       </svg>
@@ -206,33 +223,33 @@
                             </a>
                             <ul class="dropdown-menu shadow-lg">
                                 <li class="d-none992max">
-                                    <a class="dropdown-item" href="{% url 'index:treatment_of_gamblers' %}">LEČENJE KOCKARA
+                                    <a class="dropdown-item" href="{% url 'index-serbian:treatment_of_gamblers' %}">LEČENJE KOCKARA
                                     </a>
                                 </li>
                                 <li style="background-color: var(--deep-carmine);" class="d-none992min">
-                                    <a class="dropdown-item" href="{% url 'index:treatment_of_gamblers' %}">LEČENJE KOCKARA
+                                    <a class="dropdown-item" href="{% url 'index-serbian:treatment_of_gamblers' %}">LEČENJE KOCKARA
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="{% url   'index:family_and_gambler' %}">Porodica i kockar
+                                    <a class="dropdown-item" href="{% url   'index-serbian:family_and_gambler' %}">Porodica i kockar
                                     </a>
                                 </li>
 
                                 <li class="offcan-li">
-                                    <a class="dropdown-item" href="{% url 'index:gambling_problem_scene' %}">PET znaka da vaš partner ima problem sa kockanjem</a>
+                                    <a class="dropdown-item" href="{% url 'index-serbian:gambling_problem_scene' %}">PET znaka da vaš partner ima problem sa kockanjem</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="{% url 'index:gambling_addiction' %}">Zavisnost od kockanja</a>
+                                    <a class="dropdown-item" href="{% url 'index-serbian:gambling_addiction' %}">Zavisnost od kockanja</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="{% url 'index:pathological_gambling' %}">Patološko kockanje uzroci i posledice</a>
+                                    <a class="dropdown-item" href="{% url 'index-serbian:pathological_gambling' %}">Patološko kockanje uzroci i posledice</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="{% url 'index:dealing_with_gambling_problem' %}">Kako postupiti sa osobom koja ima problem sa kockanjem</a>
+                                    <a class="dropdown-item" href="{% url 'index-serbian:dealing_with_gambling_problem' %}">Kako postupiti sa osobom koja ima problem sa kockanjem</a>
                                 </li>
 
                                 <li>
@@ -270,7 +287,7 @@
                             <a class="nav-link" href="{% url 'index:blog' %}">Blog </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'index:contact' %}" class="nav-link" style="border-right:0">
+                            <a href="{% url 'index-serbian:contact' %}" class="nav-link" style="border-right:0">
 
                                 <span> Kontakt</span>
                             </a>
@@ -469,42 +486,3 @@
         top: -70px;
     }
 </style>
-<script>
-    // const nav = document.getElementsByClassName(".nav-ph");
-    // const navHeight = 70;
-    // // the point the scroll starts from (in px)
-    // let lastScrollY = 0;
-    // // how far to scroll (in px) before triggering
-    // const delta = 10;
-
-    // // function to run on scrolling
-    // function scrolled() {
-    //     let sy = window.scrollY;
-    //     // only trigger if scrolled more than delta
-    //     if (Math.abs(lastScrollY - sy) > delta) {
-    //         // scroll down -> hide nav bar
-    //         if (sy > lastScrollY && sy > navHeight) {
-    //             nav.classList.add("nav-up");
-    //         }
-    //         // scroll up -> show nav bar
-    //         else if (sy < lastScrollY) {
-    //             nav.classList.remove("nav-up");
-    //         }
-    //         // update current scroll point
-    //         lastScrollY = sy
-    //     }
-    // }
-
-    // // Add event listener & debounce so not constantly checking for scroll
-    // let didScroll = false;
-    // window.addEventListener("scroll", function(e) {
-    //     didScroll = true;
-    // });
-
-    // setInterval(function() {
-    //     if (didScroll) {
-    //         scrolled();
-    //         didScroll = false;
-    //     }
-    // }, 250)
-</script>

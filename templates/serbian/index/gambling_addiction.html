@@ -1,4 +1,4 @@
-{% extends "core/base_xherc.html" %} {% block title %} Index {% endblock title %} {% load static %} {% block content %}
+{% extends "serbian/core/base_xherc_sr.html" %} {% block title %} HT | Zavisnost od kockanja {% endblock title %} {% load static %} {% block content %}
 
 <style>
     .banner-next::after {
@@ -37,8 +37,8 @@
     <div class="content-next mb-10">
         <nav aria-label="breadcrumb" class="my-5">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a class="dark-primary fw-600" href="/">Почетна</a></li>
-                <li class="breadcrumb-item deep-carmine" aria-current="page">зависност од коцкање</li>
+                <li class="breadcrumb-item"><a class="dark-primary fw-600" href="/">Početna</a></li>
+                <li class="breadcrumb-item deep-carmine" aria-current="page">zavisnost od kockanja</li>
             </ol>
         </nav>
 
@@ -48,7 +48,7 @@
                 <div class="row">
                     <!-- min-width:992px -->
 
-                    {% include 'plugin/herc_program_banner.html' %}
+                    {% include 'serbian/plugin/herc_program_banner.html' %}
 
                 </div>
             </div>
@@ -69,11 +69,11 @@
                         </div>
                         <div class="d-block text-center">
                             <div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="mb-3 
-                                     ht-next-link-white">0808 271 7500</button>
+                                <a href="tel:+381653342321" class="mb-3 
+                                     ht-next-link-white">+381-65-33-423-21</a>
                             </div>
-                            <div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="ht-next-link-white">Закажете консултација</button>
+                            <div class="mt-4">
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="ht-next-link-white">Rezervišite termin</button>
                             </div>
                         </div>
 
@@ -207,11 +207,11 @@
 
 
                     <!-- END -->
-                    {% include 'plugin/contact_bottom.html' %}
+                    {% include 'serbian/plugin/contact_bottom.html' %}
 
 
                 </div>
-                {% include 'plugin/right_bar.html' %}
+                {% include 'serbian/plugin/right_bar.html' %}
 
             </div>
         </div>

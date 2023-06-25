@@ -31,6 +31,17 @@ def contact(request):
     return render(request, 'index/contact.html', context)
 
 
+def consultation(request):
+    
+    
+    context = {
+        
+
+    }
+    
+    return render(request, 'index/consultation.html', context)
+
+
 def romani(request):
     
     
