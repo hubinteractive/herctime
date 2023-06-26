@@ -1224,11 +1224,8 @@ footer {
         height: .6rem;
         background: var(--deep-carmine);
         z-index: 1;
+        border-radius: 50%;
     }
-    // .main-content .list-num ul li::after {
-    //     position: relative;
-    //     list-style: upper-alpha;
-    // }
     .main-content img {
         width: 90%;
         margin-top: 1.5rem;
@@ -1258,51 +1255,6 @@ footer {
         height: 350px;
         object-fit: cover;
     }
-    // .accordion-item {
-    //     --bs-accordion-bg: transparent;
-    //     color: var(--bs-accordion-color);
-    //     background-color: var(--bs-accordion-bg);
-    //     border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
-    // }
-    // .accordion-button:not(.collapsed) {
-    //     --bs-accordion-active-bg: transparent;
-    //     color: var(--bs-accordion-active-color);
-    //     background-color: var(--bs-accordion-active-bg);
-    //     box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
-    // }
-    // .accordion-body {
-    //     --bs-accordion-body-padding-y: 0;
-    //     padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
-    // }
-    // .accordion-item {
-    //     --bs-accordion-bg: transparent;
-    //     color: var(--bs-accordion-color);
-    //     background-color: var(--bs-accordion-bg);
-    //     border: 0;
-    // }
-    // .accordion-button {
-    //     position: relative;
-    //     display: flex;
-    //     align-items: center;
-    //     width: 100%;
-    //     padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-    //     font-size: 1.2rem;
-    //     font-weight: 600;
-    //     color: var(--bs-accordion-btn-color);
-    //     text-align: left;
-    //     background-color: transparent;
-    //     border: 0;
-    //     border-radius: 0;
-    //     overflow-anchor: none;
-    //     transition: var(--bs-accordion-transition);
-    // }
-    // .accordion-button:not(.collapsed) {
-    //     --bs-accordion-active-bg: transparent;
-    //     color: var(--deep-carmine);
-    //     background-color: var(--bs-accordion-active-bg);
-    //     -webkit-box-shadow: inset 0 calc(-1*var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
-    //     box-shadow: inset 0 calc(-1*var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
-    // }
     // Tabs 
     .card {
         --bs-card-bg: transparent;
@@ -1383,7 +1335,7 @@ footer {
         }
         ol,
         ul {
-            padding-left: .5rem;
+            padding-left: 1rem;
         }
     }
     @media (max-width:576px) {

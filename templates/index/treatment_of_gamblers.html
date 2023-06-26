@@ -26,6 +26,21 @@
         padding: 3rem;
         background-color: rgba(201, 199, 200, .8);
     }
+    
+    .mb-xl-0 {
+        margin: 0!important;
+    }
+    
+    @media (max-width:1200px) {
+        .mb-xl-0 {
+            margin-bottom: 2rem!important;
+        }
+        #content-next-001 .img-fluid-team {
+            height: 425px;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
 </style>
 
 
@@ -41,11 +56,11 @@
             </ol>
         </nav>
 
-
-        <div style="background-color: antiquewhite;" class="position-relative ">
+        <!-- Banner min-width:992px -->
+        <div class="position-relative ">
             <div class="banner-next">
                 <div class="row">
-                    <!-- min-width:992px -->
+
 
                     {% include 'plugin/herc_program_banner.html' %}
 
@@ -55,25 +70,37 @@
 
         <div class="row">
 
-            <!-- max-width:992px -->
+            <!-- BANNER max-width:992px -->
             <div class="d-none992min">
                 <div class="row g-0">
 
-                    <img class="img-fluid" src="{% static 'img/family-and-gembler.webp' %}" alt="">
+                    <img class="img-fluid" src="{% static 'img/content/attachment-Gambling-Addiction.jpg' %}" alt="">
+
+
                     <div class="deep-carmine-bg p-4">
+
                         <div class="text-center mb-4">
-                            <h1 class="mb-4 white-primary">HERC program lečenja patoloških kockara</h1>
-                            <p class="white-primary"> Lečenje kockara po Metodi HERC predstavlja rezultat rada sa osobama koje su zavisne od patološkog kockanja i članovima njihovih porodica.</p>
+                            <h1 class="mb-4 white-primary">
+                                Програма за третман на ХЕРЦ за патолошки коцкари
+                            </h1>
+
+                            <p class="white-primary">
+                                Третманот на коцкарите според ХЕРЦ методот е резултат на работа со луѓе кои се зависни од патолошко коцкање и членови на нивните семејства.
+                            </p>
 
                         </div>
+
                         <div class="d-block text-center">
-                            <div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="mb-3 
-                                     ht-next-link-white">0808 271 7500</button>
+                            <div class="mb-4">
+                                <a href="tel:+38976303635" class="            ht-next-link-white">
+                                    +389 76 303 635
+                                </a>
                             </div>
-                            <div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="ht-next-link-white">Закажете консултација</button>
-                            </div>
+
+
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="opacity: 1;" class="ht-next-link-white">Закажете консултација
+                                </button>
+
                         </div>
 
                     </div>
@@ -90,122 +117,103 @@
             <div class="row g-0">
                 <div class="col-xl-8 col-lg-7 main-content">
                     <h1 class="deep-carmine">Третман на коцкарот</h1>
-                    <h2 class="dark-primary">MI IMAMO NAJBOLJE REZULTATE – LEČENJE KOCKARA- Herc Time</h2>
+
+                    <!-- <h2 class="dark-primary">НИЕ ИМАМЕ НАЈДОБРИ РЕЗУЛТАТИ</h2> -->
                     <ul>
-                        <li>Probali ste sami da prestanete sa kockanjem i niste uspeli..</li>
-                        <li>Vodili su vas kod psihologa, psihijatra, davali vam neke lekove i niste uspeli..</li>
-                        <li>Vodili vas u privatne bolnice- klinike za odvikavanje od droge i ostalih bolesti zavisnosti i…niste uspeli. Zašto??</li>
+                        <li>
+                            Се обидовте сами да се откажете од коцкањето и не успеавте..
+                        </li>
+                        <li>
+                            Те однесоа на психолог, психијатар, ти дадоа лекови и не успеа.
+                        </li>
+                        <li>
+                            Ве однесоа во приватни болници - клиники за рехабилитација од дрога и други зависности и...не успеавте.
+                        </li>
+
                     </ul>
-                    <p>Zato što niko od tih koji su pokušali da vam pomognu nije prošao pakao kockanja. Zato što vas niko ne razume i ne može da vas shvati. Niko od njih nije ušao o kockarnicu, popunio tiket. Kako može da vam pomogne ako ne zna kakav je
-                        to pakao kroz koji prolazite?</p>
-                    <p><strong> Niste pokušali na pravom mestu!</strong> Mi smo vam poslednja opcija! Ne gubite dragoceno vreme i novac! Ako imate sreće da ovo pročitate a da niste pokušavali nigde onda ste na pravom mestu! Puno je godina rada iza nas, puno
-                        promenjenih života, i srećnih porodica bez kocke koja ih je uništavala. Mi to radimo profesionalno, stručno, i imamo najbolje rezultate koji su priznati u svetu!</p>
+                    <h3>
+                        <strong>
+                            Зoшто??
+                        </strong>
+
+                    </h3>
+
+                    <p>
+                        Затоа што никој од оние кои се обиделе да ви помогнат не поминал низ пеколот на коцкањето. Затоа што никој не те разбира и не може да те разбере. Никој од нив не влегол во казиното, го пополнил билетот. Како може да ви помогне ако не знае низ кој пекол
+                        поминувате?
+                    </p>
+
+                    <p>
+                        <strong>
+                            Не сте се обиделе на вистинското место!
+                        </strong> Ние сме вашата последна опција! Не го трошете вашето драгоцено време и пари! Ако сте доволно среќни да го прочитате ова без да се обидете никаде, тогаш сте на вистинското место! Многу години работа
+                        се зад нас, многу променети животи и среќни семејства без коцката што ги уништи. Тоа го правиме професионално, професионално и ги имаме најдобрите резултати кои се признати во светот!
+                    </p>
+
+
+
+                    <ul>
+                        <li>
+                            Едукацијата за повлекување од коцкање се заснова на методот HERC на Дејан Станковиќ.
+                        </li>
+                        <li>
+                            Третманот на коцкарите според HERC методот е резултат на работа со луѓе кои се зависни од патолошко коцкање и членови на нивните семејства.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Програмата ја спроведува тим експерти во Нови Сад (или онлајн преку Viber). Се покажа дека едукациите траат 7-10 дена секојдневно според модел на забрзано учење. Тоа дава континуитет и динамика, а промените се очигледни потоа.
+                    </p>
 
                     {% include 'plugin/marketing/marketing_2.html' %}
 
-                    <ul>
-                        <li>Edukacija odvikavanja od kockanja zasnovana je na HERC metodi Dejana Stankovića.</li>
-                        <li>Lečenje kockara po Metodi HERC predstavlja rezultat rada sa osobama koje su zavisne od patološkog kockanja i članovima njihovih porodica.</li>
-                    </ul>
-                    <p>Program sprovodi tim stručnjaka u Novom Sadu (ili online preko vibera). Najefinasnije se pokazalo da edukacije traju 7-10 dana svakodnevno po ubrzanom modelu učenja. time se dobija kontinuitet i dinamika, a promene su očigledne nakon
-                        toga.
+                    <h2>
+                        <strong>
+                            Програма за третман
+                        </strong> на HERC за патолошки коцкари
+                    </h2>
+                    <p>
+                        Дејан Станковиќ напиша три книги кои се добиваат како дел од едукацијата:
+                        <a class="" href="https://kockanje.net/blog-o-kockanju/">
+                            Ulog
+                        </a> ,
+                        <a class="" href="https://kockanje.net/stop-kockanje/">
+                            Patološko kockanje-uzroci i posledice
+                        </a> и
+                        <a class="" href="https://kockanje.net/tag/odvikavanje-od-kockanja/">
+                            Zbogom kockanje
+                        </a>
                     </p>
-                    <h2><strong> HERC program</strong> lečenja patoloških kockara </h2>
-                    <p>Dejan Stanković je napisao tri knjige koje se dobijaju u okviru edukacije: <strong><a href="#">
-                                Ulog</a>, <a href="#"> Patološko kockanje-uzroci i posledice </a> i <a href="#"> Zbogom
-                                kockanje</a>.</strong></p>
+
+
 
                     <ul>
                         <li>
-                            U okviru Programa učestvuje tim psihologa koji rade na osnaživanju ličnih i zdravih kapaciteta, emocionalne pismenosti, asertivnosti, i izgradnji ostalih veština kroz razne vidove psiho-edukacija prateći najsavremenije i moderne trendove, saznanja i dostignuća
-                            iz oblasti psihologije.
+                            Во рамките на Програмата учествува тим од психолози кои работат на зајакнување на личните и здрави капацитети, емоционална писменост, самоувереност и градење други вештини преку различни видови на психо-едукација следејќи ги најсовремените и модерни трендови,
+                            знаења и достигнувања од областа на психологијата.
                         </li>
                         <li>
-                            Terapije su individualne i prilagođene svakom klijentu.
+                            Терапиите се индивидуални и прилагодени на секој клиент.
                         </li>
                         <li>
-                            Diskrecija je zagarantovana.
+                            Дискрецијата е загарантирана.
                         </li>
                         <li>
-                            Dužina Programa kao i sam model zavise od dubine problema a određuju se na konsultacijama i na osnovu rezultata psihološkog testiranja.
+                            Должината на Програмата како и самиот модел зависат од длабочината на проблемот и се одредуваат при консултации и врз основа на резултатите од психолошкото тестирање.
                         </li>
                     </ul>
                     <div class="d-flex justify-content-center">
                         <img class="img-fluid" src="{% static 'img/content/Dejan-Stankovic-scaled.jpg' %}" alt="">
                     </div>
                     <!-- END -->
+
+
                     {% include 'plugin/contact_bottom.html' %}
                     <p>
-                        Garatntujemo vam diskreciju, i poštujemo vaše životne obaveze. Za klijente koji dolaze iz okolnih zemalja obezbeđujemo smeštaj. Trajanje osnovnog novoa edukacije od 7 do 10 dana. obavljaju se obavezno zakazivanjem na telefon 0653342321
+                        Ви гарантираме дискреција и ги почитуваме Вашите животни обврски. Обезбедуваме сместување за клиенти кои доаѓаат од околните земји. Времетраење на основното ниво на едукација е од 7 до 10 дена. Мора да се направи со закажување на телефон
+                        <a href="tel:+38976303635">+389 76 303 635</a>
                     </p>
 
-                    <div>
-                        <div class="row g-0">
-                            <style>
-                                .mb-xl-0 {
-                                    margin: 0!important;
-                                }
-                                
-                                @media (max-width:1200px) {
-                                    .mb-xl-0 {
-                                        margin-bottom: 2rem!important;
-                                    }
-                                    #content-next-001 .img-fluid-team {
-                                        height: 425px;
-                                        -o-object-fit: cover;
-                                        object-fit: cover;
-                                    }
-                                }
-                            </style>
-                            <h2 class="fw-800">Тим на психолози</h2>
-                            <div class="col-xl-4 col-md-12 d-flex justify-content-center">
-                                <img class="img-fluid-team mb-xl-0" src="https://stankovicdejan.com/wp-content/uploads/2019/03/IMG_20190314_171525.jpg" alt="">
-                            </div>
-                            <div class="col-xl-7 col-md-12 d-flex justify-content-center">
-
-                                <img class="img-fluid-team  m-0" src="https://stankovicdejan.com/wp-content/uploads/2021/05/IMG_20210512_104614.jpg" alt="">
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <style>
-                        .video-fr {
-                            width: calc(100% - 100px);
-                            height: 394px;
-                        }
-                        
-                        @media (max-width:1200px) {
-                            .video-fr {
-                                width: calc(100% - 50px);
-                                height: 394px;
-                            }
-                        }
-                        
-                        @media (max-width:992px) {
-                            .video-fr {
-                                width: calc(100%);
-                                height: 394px;
-                            }
-                        }
-                        
-                        @media (max-width:576px) {
-                            .video-fr {
-                                width: calc(100%);
-                                height: 215.37px;
-                            }
-                        }
-                    </style>
-                    <div class="my-5 d-flex justify-content-center">
-                        <div class="w-100">
-
-                            <h2 class="fw-800">Zasto vam je fokus samo na novcu</h2>
-                            <iframe class="video-fr" loading="lazy" title="ZAŠTO VAM JE FOKUS SAMO NA NOVCU⁉️" src="https://www.youtube.com/embed/dSAljrOKk0Y?list=PLpRpUXzcyQipJGa2XI0cDfYqqv5z08-ys" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen="" frameborder="0"></iframe>
-                        </div>
-                    </div>
-
-                    <p class="deep-carmine">#stopkockanje #lecenjekockara #lecenjekockanja #kockanje #gambling #gamblingaddiction #poker #onlinekockanje #rulet #dejanstankovic #herctime</p>
 
 
                 </div>
